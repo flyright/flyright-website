@@ -1,0 +1,27 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+body {
+	font-family: 'Barlow', sans-serif;
+	font-weight: 400;
+	color: #020836;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Barlow', sans-serif;
+	font-weight: 600;
+	color: #020836;
+}
