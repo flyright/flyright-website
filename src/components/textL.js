@@ -3,7 +3,7 @@ import { dark } from '../utils/colors'
 import media from '../utils/media'
 
 const TextL = styled.div`
-	font-family: Fredericka the Great, sans-serif;
+	font-family: Barlow, sans-serif;
 	font-size: 32px;
 	color: ${dark};
 	line-height: 42px;

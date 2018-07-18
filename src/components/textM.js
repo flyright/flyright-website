@@ -3,7 +3,7 @@ import { dark } from '../utils/colors'
 import media from '../utils/media'
 
 const TextM = styled.div`
-	font-family: Didact Gothic, sans-serif;
+	font-family: Barlow, sans-serif;
 	font-size: 18px;
 	line-height: 28px;
 	color: ${dark};

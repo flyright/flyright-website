@@ -50,7 +50,7 @@ const processBlogPosts = ({ graphql, boundActionCreators }) => {
             })
 
             createPage({
-              path: `/${edge.node.slug}`,
+              path: `/blog/${edge.node.slug}`,
               component: slash(pageTemplate),
               context: {
                 id: edge.node.id,

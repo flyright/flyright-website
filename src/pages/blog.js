@@ -160,8 +160,8 @@ export const blogQuery = graphql`
 					slug
 					title
 					date(formatString: "MMMM DD, YYYY")
-					shortDescription {
-						shortDescription
+					description {
+						description
 					}
 					previewImage {
 						id
