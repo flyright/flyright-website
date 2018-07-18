@@ -4,19 +4,15 @@
 
 Flyright's website is built with [Gatsby, a static site generator for React](https://www.gatsbyjs.org/). This codebase is separate from the [Flyright Webapp](https://github.com/tyhopp/flyright-webapp), which is written in just React.
 
-## Note on Gatsby
+## Deployment
 
-Building on Gatsby will allow us to add a CMS such as [Contentful](https://www.contentful.com/) in the future so that non-developer team members can manage the site independently. Using React as base, [Styled Components](https://www.styled-components.com/) for reusable components, and [GraphQL](https://graphql.org/) to query data, this allows the website to be very extensible for future expansion of the website.
+This site is deployed via Netlify at https://flyright.netlify.com. The production site will later be deployed at https://flyright.co.
+
+The content for this site comes from Contentful. When a new entry is published or unpublished on Contentful, it will trigger an automatic rebuild of the site on Netlify. This also occurs when code is pushed to `master` on Github.
 
 ## Usage
 
 1.  `git clone https://github.com/tyhopp/flyright-website`
 2.  `cd flyright-website`
-
-    | If you have `npm@5.2.0` or higher, you can use `npx gatsby [command]`
-
-    | Otherwise, install the custom CLI tool with `npm install --global gatsby-cli`
-
-3.  `gatsby develop` — Gatsby will start a hot-reloading development environment accessible at localhost:8000
-4.  `gatsby build` — Gatsby will perform an optimized production build for your site generating static HTML and per-route JavaScript code bundles.
-5.  `gatsby serve` — Gatsby starts a local HTML server for testing your built site.
+3.  `cp .env.example .env` to create a .env file. Add the secret API keys from Contentful to this file.
+4.  `npm run develop` — Gatsby will start a hot-reloading development environment accessible at localhost:8000
