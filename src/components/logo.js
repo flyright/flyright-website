@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import media from '../utils/media.js'
 
-const FlyrightLogo = () => (
+const Logo = () => (
 	<Svg
 		id="logo"
 		width="100%"
@@ -38,7 +38,7 @@ const FlyrightLogo = () => (
 	</Svg>
 )
 
-const Logo = styled.svg`
+const Svg = styled.svg`
 	margin-bottom: 0;
 	transform-origin: center;
 	width: 40px;

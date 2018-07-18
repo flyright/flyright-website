@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Logo from '../components/Logo'
+import Logo from '../components/logo'
 import Header from '../components/header'
 import TextS from '../components/textS'
 import TextM from '../components/textM'
