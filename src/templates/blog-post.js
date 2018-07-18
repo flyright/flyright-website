@@ -26,7 +26,7 @@ class BlogPost extends React.Component {
 			title,
 			date,
 			slug,
-			shortDescription,
+			description,
 			previewImage,
 			category,
 		} = page[0].node
@@ -36,17 +36,11 @@ class BlogPost extends React.Component {
 				<Helmet>
 					<title>Flyright</title>
 					<meta name="title" content={title} />
-					<meta
-						name="description"
-						content={shortDescription.shortDescription}
-					/>
+					<meta name="description" content={description.description} />
 					<meta name="keywords" content={category.join(', ')} />
 					<meta property="og:type" content="article" />
 					<meta property="og:title" content={title} />
-					<meta
-						property="og:description"
-						content={shortDescription.shortDescription}
-					/>
+					<meta property="og:description" content={description.description} />
 					<meta
 						property="og:url"
 						content={`https://flyright.co/blog/${slug}`}
@@ -118,8 +112,8 @@ export const blogPostQuery = graphql`
 					slug
 					title
 					date(formatString: "MMMM DD, YYYY")
-					shortDescription {
-						shortDescription
+					description {
+						description
 					}
 					category
 					previewImage {
