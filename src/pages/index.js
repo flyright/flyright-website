@@ -26,8 +26,6 @@ class Index extends React.Component {
 	}
 
 	render() {
-		const posts = this.props.data.allContentfulBlogPost.edges
-
 		return (
 			<Wrapper padding="0 1em">
 				<Helmet>
