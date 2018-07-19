@@ -45,8 +45,8 @@ const Svg = styled.svg`
 		margin: 0 0.5em 0 0;
 	`}
 	${media.tab`
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
   `} 
 `
 
