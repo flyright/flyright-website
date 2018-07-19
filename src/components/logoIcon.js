@@ -44,6 +44,10 @@ const Svg = styled.svg`
 	${media.mbl`
 		margin: 0 0.5em 0 0;
 	`}
+	${media.tab`
+    width: 46px;
+    height: 46px;
+  `} 
 `
 
 export default LogoIcon
