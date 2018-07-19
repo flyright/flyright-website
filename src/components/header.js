@@ -16,7 +16,10 @@ const Header = props => {
 		<Bar>
 			<Row center padding="0 0 0.2em 0">
 				<LinkInternal to="/" borderless aria-label="Link to home">
-					<LogoIcon />
+					<Row center>
+						<LogoIcon />
+						<LogoWords />
+					</Row>
 				</LinkInternal>
 			</Row>
 			<Row center padding="0 0 0.2em 0">

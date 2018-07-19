@@ -21,6 +21,14 @@ const LogoWords = () => (
 	</Svg>
 )
 
-const Svg = styled.svg``
+const Svg = styled.svg`
+	display: none;
+	${media.tab`
+		display: block;
+		width: 79px;
+		height: 23px;
+		margin: 0.15em 0 0 0.1em;
+	`}
+`
 
 export default LogoWords

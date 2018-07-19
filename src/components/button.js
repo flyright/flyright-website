@@ -28,6 +28,9 @@ const Button = styled.div`
 	${media.mbl`
 		margin: 1em 0.5em;
 	`};
+	${media.tab`
+		margin: 1em 0.7em;
+	`}
 	${media.desk`
 		&:hover {
 			box-shadow: 0 14px 28px rgba(2, 8, 54, 0.1), 0 10px 10px rgba(2, 8, 54, 0.1);
