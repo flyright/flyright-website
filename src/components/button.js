@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import media from '../utils/media'
-import { dark, white, acid } from '../utils/colors'
+import { dark, white, purple, acid } from '../utils/colors'
 
 const Button = styled.div`
 	display: flex;
@@ -8,11 +8,11 @@ const Button = styled.div`
 	font-size: 1em;
 	font-weight: 500;
 	letter-spacing: 0.3px;
-	color: ${dark};
+	color: ${props => props.purple ? white : dark};
 	text-decoration: none;
 	text-align: center;
 	padding: 0.6em 1.2em;
-	background-color: ${white};
+	background-color: ${props => props.purple ? purple : white};
 	cursor: pointer;
 	margin: 1em 0.3em;
 	border-radius: 100px;
