@@ -139,7 +139,7 @@ class Blog extends React.Component {
 						</Filter>
 					</Block>
 				</Header>
-				<Container>
+				<Container role="main">
 					{currentFilter !== ''
 						? filteredPosts.map(post => <Card post={post} key={post.node.id} />)
 						: posts.map(post => <Card post={post} key={post.node.id} />)}

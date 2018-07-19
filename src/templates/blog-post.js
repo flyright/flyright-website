@@ -51,7 +51,7 @@ class BlogPost extends React.Component {
 						<Logo />
 					</LinkInternal>
 				</Header>
-				<Wrapper content padding="0.5em 0 2em 0">
+				<Wrapper content padding="0.5em 0 2em 0" role="main">
 					<Content img key={previewImage.id}>
 						<Img sizes={previewImage.sizes} alt={previewImage.title} />
 					</Content>
