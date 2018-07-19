@@ -14,7 +14,7 @@ const Button = styled.div`
 	padding: 0.6em 1.2em;
 	background-color: ${white};
 	cursor: pointer;
-	margin: 1em 0.5em;
+	margin: 1em 0.3em;
 	border-radius: 100px;
 	line-height: 20px;
 	box-shadow: 0 1px 3px rgba(2, 8, 54, 0), 0 1px 7px rgba(2, 8, 54, 0.1);
@@ -23,6 +23,10 @@ const Button = styled.div`
 	&:hover {
 		box-shadow: 0 14px 28px rgba(2, 8, 54, 0.1), 0 10px 10px rgba(2, 8, 54, 0.1);
 	}
+
+	${media.mbl`
+		margin: 1em 0.5em;
+	`};
 `
 
 export default Button

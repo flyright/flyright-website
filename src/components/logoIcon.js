@@ -37,17 +37,21 @@ const LogoIcon = () => (
 )
 
 const Svg = styled.svg`
-	margin: 0 0.5em 0 0;
 	transform-origin: center;
-	width: 48px;
-	height: 48px;
+	width: 44px;
+	height: 44px;
+	margin: 0 0.2em 0 0;
+	${media.mbl`
+		margin: 0 0.5em 0 0;
+	`}
 	${media.tab`
-        width: 50px;
-        height: 50px;
-    `} ${media.desk`
-	      width: 55px;
-	      height: 55px;
-    `};
+    width: 50px;
+    height: 50px;
+  `} 
+  ${media.desk`
+		width: 55px;
+		height: 55px;
+	`};
 `
 
 export default LogoIcon

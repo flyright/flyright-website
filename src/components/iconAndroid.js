@@ -30,6 +30,7 @@ const IconAndroid = () => (
 const Svg = styled.svg`
 	width: 17px;
 	height: 19px;
+	padding: 1px 0;
 	margin: 0 0.4em 0.1em 0;
 `
 

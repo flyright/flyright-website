@@ -39,10 +39,14 @@ const Header = props => {
 const Bar = styled.div`
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	width: 100%;
 	height: 80px;
-	padding: 0 1em;
 	border-bottom: 1px solid #f4f4f4;
+	padding: 0 0.5em;
+	${media.mbl`
+		padding: 0 1em;
+	`};
 `
 
 export default Header

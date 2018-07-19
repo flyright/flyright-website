@@ -6,7 +6,7 @@ import { css } from 'styled-components'
 
 const sizes = {
 	// default styles written mobile-first assuming 320px width
-	mbl: 400,
+	mbl: 375,
 	tab: 700,
 	desk: 990,
 	deskL: 1200,
