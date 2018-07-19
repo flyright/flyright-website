@@ -36,6 +36,10 @@ class Layout extends React.Component {
 						href="https://fonts.googleapis.com/css?family=Barlow:400,500,600"
 						rel="stylesheet"
 					/>
+					<noscript>
+						This website requires Javascript to work properly. Please enable
+						Javascript.
+					</noscript>
 				</Helmet>
 				{children()}
 			</div>
