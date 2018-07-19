@@ -43,7 +43,7 @@ class Index extends React.Component {
 				</Helmet>
 				<Header>
 					<Block>
-						<LinkInternal to="/" borderless>
+						<LinkInternal to="/" borderless aria-label="Link to home">
 							<Logo />
 						</LinkInternal>
 					</Block>

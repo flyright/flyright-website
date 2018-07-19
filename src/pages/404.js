@@ -15,7 +15,7 @@ class MissingRoute extends React.Component {
 			<Wrapper padding="0 1em">
 				<Header>
 					<Block>
-						<LinkInternal to="/" borderless>
+						<LinkInternal to="/" borderless aria-label="Link to home">
 							<Logo />
 						</LinkInternal>
 					</Block>

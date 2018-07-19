@@ -47,7 +47,7 @@ class BlogPost extends React.Component {
 					/>
 				</Helmet>
 				<Header>
-					<LinkInternal to="/" borderless>
+					<LinkInternal to="/" borderless aria-label="Link to home">
 						<Logo />
 					</LinkInternal>
 				</Header>
