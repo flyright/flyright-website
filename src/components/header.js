@@ -14,12 +14,12 @@ import Button from './button'
 const Header = props => {
 	return (
 		<Bar>
-			<Block>
+			<Row center padding="0 0 0.2em 0">
 				<LinkInternal to="/" borderless aria-label="Link to home">
 					<LogoIcon />
 				</LinkInternal>
-			</Block>
-			<Row center>
+			</Row>
+			<Row center padding="0 0 0.2em 0">
 				<Button>
 					<IconIos />
 					iOS

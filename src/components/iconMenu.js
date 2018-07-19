@@ -31,15 +31,15 @@ const Svg = styled.svg`
 	height: 24px;
 	cursor: pointer;
 	padding: 0 1em;
-	margin: 0 0.5em 0 0;
+	margin: 0.1em 0.5em 0 0;
 	${media.mbl`
 		padding: 0 1.5em;
-		margin: 0 1em 0 0;
+		margin: 0.1em 1em 0 0;
 	`};
 	${media.tab`
 		transform: rotate(90deg);
 		padding: padding: 0 2em;
-		margin: 0 1.5em 0 0;
+		margin: 0.1em 1.5em 0 0;
 	`};
 `
 
