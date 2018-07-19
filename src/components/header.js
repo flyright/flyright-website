@@ -50,6 +50,9 @@ const Bar = styled.div`
 	${media.mbl`
 		padding: 0 1em;
 	`};
+	${media.tab`
+		padding: 0 1.5em;
+	`}
 `
 
 export default Header

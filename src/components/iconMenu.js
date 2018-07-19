@@ -38,7 +38,7 @@ const Svg = styled.svg`
 	`};
 	${media.tab`
 		transform: rotate(90deg);
-		padding: padding: 0 2em;
+		padding: 1em 2em;
 		margin: 0.1em 1.5em 0 0;
 	`};
 `
