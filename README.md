@@ -1,4 +1,4 @@
-![alt text](https://github.com/tyhopp/flyright-website/raw/master/src/assets/img/icon-circle-sm.png 'Flyright Logo')
+![alt text](https://github.com/tyhopp/flyright-website/raw/master/src/assets/img/logoS.png 'Flyright Logo')
 
 # Flyright Website
 
