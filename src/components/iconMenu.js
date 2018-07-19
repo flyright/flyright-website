@@ -41,6 +41,9 @@ const Svg = styled.svg`
 		padding: 1em 2em;
 		margin: 0.1em 1.5em 0 0;
 	`};
+	${media.desk`
+		display: none;
+	`}
 `
 
 export default IconMenu

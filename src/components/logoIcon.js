@@ -48,10 +48,6 @@ const Svg = styled.svg`
     width: 50px;
     height: 50px;
   `} 
-  ${media.desk`
-		width: 55px;
-		height: 55px;
-	`};
 `
 
 export default LogoIcon

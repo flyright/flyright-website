@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import media from '../utils/media'
-import { dark, white, smoke } from '../utils/colors'
+import { dark, white, acid } from '../utils/colors'
 
 const Button = styled.div`
 	display: flex;
@@ -17,23 +17,23 @@ const Button = styled.div`
 	margin: 1em 0.3em;
 	border-radius: 100px;
 	line-height: 20px;
-	box-shadow: 0 1px 3px rgba(2, 8, 54, 0), 0 1px 7px rgba(2, 8, 54, 0.1);
+	box-shadow: 0 2px 4px ${acid};
 	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 	user-select: none;
 
 	&:active {
-		background-color: ${smoke};
+		background-color: ${acid};
 	}
 
 	${media.mbl`
 		margin: 1em 0.5em;
 	`};
 	${media.tab`
-		margin: 1em 0.7em;
+		margin: 1em 0.75em;
 	`}
 	${media.desk`
 		&:hover {
-			box-shadow: 0 14px 28px rgba(2, 8, 54, 0.1), 0 10px 10px rgba(2, 8, 54, 0.1);
+			box-shadow: 0 4px 4px ${acid};
 		}
 	`};
 `

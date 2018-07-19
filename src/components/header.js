@@ -10,10 +10,13 @@ import LinkInternal from './linkInternal'
 import Block from './block'
 import Row from './row'
 import Button from './button'
+import HeaderWrapper from './headerWrapper'
+import { smoke } from '../utils/colors'
 
 const Header = props => {
 	return (
 		<Bar>
+			<HeaderWrapper>
 			<Row center padding="0 0 0.2em 0">
 				<LinkInternal to="/" borderless aria-label="Link to home">
 					<Row center>
@@ -35,24 +38,13 @@ const Header = props => {
 					<IconMenu />
 				</Block>
 			</Row>
+			</HeaderWrapper>
 		</Bar>
 	)
 }
 
 const Bar = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	height: 80px;
-	border-bottom: 1px solid #f4f4f4;
-	padding: 0 0.5em;
-	${media.mbl`
-		padding: 0 1em;
-	`};
-	${media.tab`
-		padding: 0 1.5em;
-	`}
+	border-bottom: 1px solid ${smoke};
 `
 
 export default Header
