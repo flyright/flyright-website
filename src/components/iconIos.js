@@ -11,11 +11,11 @@ const IconIos = () => (
 		aria-labelledby="iconIos"
 	>
 		<title id="iconIos">App Store</title>
-		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g
 				transform="translate(-114.000000, -27.000000)"
 				fill="#020836"
-				fill-rule="nonzero"
+				fillRule="nonzero"
 			>
 				<g>
 					<g transform="translate(95.000000, 18.000000)">

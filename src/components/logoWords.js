@@ -27,7 +27,7 @@ const Svg = styled.svg`
 		display: block;
 		width: 79px;
 		height: 23px;
-		margin: 0.15em 0 0 0.1em;
+		margin: 0.25em 0 0 0.1em;
 	`}
 `
 
