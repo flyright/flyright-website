@@ -2,15 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import media from '../utils/media.js'
 
-const Logo = () => (
+const Spinner = () => (
 	<Svg
 		width="100%"
 		height="100%"
 		viewBox="0 0 75 75"
 		xmlns="http://www.w3.org/2000/svg"
-		aria-labelledby="logo"
+		aria-labelledby="spinner"
 	>
-		<title id="logo">Flyright logo</title>
+		<title id="spinner">Loading...</title>
 		<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g transform="translate(-80.000000, -44.000000)">
 				<g transform="translate(80.000000, 44.000000)">
@@ -41,6 +41,31 @@ const Svg = styled.svg`
 	transform-origin: center;
 	width: 40px;
 	height: 40px;
+	& .topTri {
+		transform-origin: center;
+		animation: glide 2s 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+	}
+	& .bottomTri {
+		transform-origin: center;
+		animation: glide 2s 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+	}
+	@keyframes glide {
+		0% {
+			transform: translateX(0px);
+		}
+		24% {
+			transform: translateX(60px);
+		}
+		24.1% {
+			transform: translateX(-60px);
+		}
+		50% {
+			transform: translateX(0px);
+		}
+		100% {
+			transform: translateX(0px);
+		}
+	}
 	${media.tab`
         width: 50px;
         height: 50px;
@@ -50,4 +75,4 @@ const Svg = styled.svg`
     `};
 `
 
-export default Logo
+export default Spinner
