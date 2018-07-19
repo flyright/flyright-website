@@ -3,18 +3,18 @@ import media from '../utils/media'
 import { dark, white } from '../utils/colors'
 
 const Button = styled.div`
-	display: block;
-	font-size: ${props => (props.article ? `0.75em` : `0.9em`)};
-	font-weight: bold;
-	letter-spacing: 1px;
+	display: flex;
+	align-items: center;
+	font-size: 1em;
+	font-weight: 500;
+	letter-spacing: 0.3px;
 	color: ${dark};
-	text-transform: uppercase;
 	text-decoration: none;
 	text-align: center;
-	padding: ${props => (props.article ? `0.6em 1.2em` : `0.75em 1.5em`)};
+	padding: 0.6em 1.2em;
 	background-color: ${white};
 	cursor: pointer;
-	margin: ${props => (props.article ? `1em 1em 1em 0` : `1em 0.5em`)};
+	margin: 1em 0.5em;
 	border-radius: 100px;
 	line-height: 20px;
 	box-shadow: 0 1px 3px rgba(2, 8, 54, 0), 0 1px 7px rgba(2, 8, 54, 0.1);

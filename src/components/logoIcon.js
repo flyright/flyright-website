@@ -2,15 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import media from '../utils/media.js'
 
-const Logo = () => (
+const LogoIcon = () => (
 	<Svg
 		width="100%"
 		height="100%"
 		viewBox="0 0 75 75"
 		xmlns="http://www.w3.org/2000/svg"
-		aria-labelledby="logo"
+		aria-labelledby="logoIcon"
 	>
-		<title id="logo">Flyright logo</title>
+		<title id="logoIcon">Flyright logo</title>
 		<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g transform="translate(-80.000000, -44.000000)">
 				<g transform="translate(80.000000, 44.000000)">
@@ -37,10 +37,10 @@ const Logo = () => (
 )
 
 const Svg = styled.svg`
-	margin-bottom: 0;
+	margin: 0 0.5em 0 0;
 	transform-origin: center;
-	width: 40px;
-	height: 40px;
+	width: 48px;
+	height: 48px;
 	${media.tab`
         width: 50px;
         height: 50px;
@@ -50,4 +50,4 @@ const Svg = styled.svg`
     `};
 `
 
-export default Logo
+export default LogoIcon

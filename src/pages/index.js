@@ -1,7 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Logo from '../components/logo'
-import Header from '../components/header'
 import TextXS from '../components/textXS'
 import TextS from '../components/textS'
 import TextM from '../components/textM'
@@ -41,13 +39,6 @@ class Index extends React.Component {
 					/>
 					<meta property="og:url" content="https://flyright.co" />
 				</Helmet>
-				<Header>
-					<Block>
-						<LinkInternal to="/" borderless aria-label="Link to home">
-							<Logo />
-						</LinkInternal>
-					</Block>
-				</Header>
 			</Wrapper>
 		)
 	}

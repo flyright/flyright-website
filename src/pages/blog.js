@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Logo from '../components/logo'
 import Header from '../components/header'
 import TextS from '../components/textS'
 import TextM from '../components/textM'
@@ -100,12 +99,7 @@ class Blog extends React.Component {
 					/>
 					<meta property="og:url" content="https://flyright.co/blog" />
 				</Helmet>
-				<Header>
-					<Block>
-						<LinkInternal to="/" borderless aria-label="Link to home">
-							<Logo />
-						</LinkInternal>
-					</Block>
+				<Container>
 					<Block>
 						<TextXL center padding="0.5em 0">
 							Blog
@@ -138,7 +132,7 @@ class Blog extends React.Component {
 								})}
 						</Filter>
 					</Block>
-				</Header>
+				</Container>
 				<Container role="main">
 					{currentFilter !== ''
 						? filteredPosts.map(post => <Card post={post} key={post.node.id} />)

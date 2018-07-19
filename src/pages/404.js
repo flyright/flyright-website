@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Wrapper from '../components/wrapper'
 import Block from '../components/block'
-import Logo from '../components/logo'
 import Header from '../components/header'
 import TextM from '../components/textM'
 import TextXL from '../components/textXL'
@@ -13,13 +12,6 @@ class MissingRoute extends React.Component {
 	render() {
 		return (
 			<Wrapper padding="0 1em">
-				<Header>
-					<Block>
-						<LinkInternal to="/" borderless aria-label="Link to home">
-							<Logo />
-						</LinkInternal>
-					</Block>
-				</Header>
 				<Column padding="2em 0">
 					<TextXL>404</TextXL>
 					<TextM center padding="2em 0" style={{ width: '250px' }}>

@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Logo from '../components/logo'
 import Wrapper from '../components/wrapper'
 import Container from '../components/container'
 import Content from '../components/content'
@@ -46,11 +45,6 @@ class BlogPost extends React.Component {
 						content={`https://flyright.co/blog/${slug}`}
 					/>
 				</Helmet>
-				<Header>
-					<LinkInternal to="/" borderless aria-label="Link to home">
-						<Logo />
-					</LinkInternal>
-				</Header>
 				<Wrapper content padding="0.5em 0 2em 0" role="main">
 					<Content img key={previewImage.id}>
 						<Img sizes={previewImage.sizes} alt={previewImage.title} />
