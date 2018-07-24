@@ -16,7 +16,9 @@ class MissingRoute extends React.Component {
 					<TextXL>404</TextXL>
 					<TextM center padding="2em 0" style={{ width: '250px' }}>
 						Whoops, nothing here. <br />
-						<LinkInternal to="/">Return home?</LinkInternal>
+						<LinkInternal border to="/">
+							Return home?
+						</LinkInternal>
 					</TextM>
 				</Column>
 			</Wrapper>

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { dark, red } from '../utils/colors'
+import { dark, purple } from '../utils/colors'
 
 const LinkExternal = styled.a`
 	color: ${dark};
@@ -9,8 +9,8 @@ const LinkExternal = styled.a`
 	outline: none;
 	text-decoration: none;
 	box-shadow: none;
-	border-bottom: ${props => (props.borderless ? `none` : `3px solid ${red}`)};
-	padding: 0 0 0.25em 0;
+	border-bottom: ${props => (props.border ? `2.5px solid ${purple}` : `none`)};
+	padding: ${props => (props.border ? `0 0 0.15em 0` : `none`)};
 	margin: 0;
 `
 
