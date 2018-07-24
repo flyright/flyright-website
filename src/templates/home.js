@@ -39,6 +39,7 @@ class Home extends React.Component {
 					<meta property="og:description" content={description.description} />
 					<meta property="og:url" content="https://flyright.co" />
 				</Helmet>
+				<div style={{ padding: `400px` }} />
 			</Wrapper>
 		)
 	}

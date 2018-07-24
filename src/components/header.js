@@ -11,7 +11,7 @@ import Block from './block'
 import Row from './row'
 import Button from './button'
 import HeaderWrapper from './headerWrapper'
-import { smoke } from '../utils/colors'
+import { white, smoke } from '../utils/colors'
 
 const Header = props => {
 	return (
@@ -44,6 +44,12 @@ const Header = props => {
 }
 
 const Bar = styled.div`
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: ${white};
 	border-bottom: 1px solid ${smoke};
 `
 
