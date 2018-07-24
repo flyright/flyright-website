@@ -29,7 +29,9 @@ class BlogPost extends React.Component {
 			previewImage,
 			category,
 		} = page[0].node
+
 		const content = page[0].node.content.content
+
 		return (
 			<div>
 				<Helmet>

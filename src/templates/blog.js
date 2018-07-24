@@ -85,19 +85,20 @@ class Blog extends React.Component {
 			filteredPosts,
 		} = this.state
 
+		const page = this.props.data.allContentfulPage.edges
+		const { title, slug, description, keywords } = page[0].node
+
 		return (
 			<Wrapper padding="0 1em 5em 1em">
 				<Helmet>
-					<title>Blog</title>
-					<meta name="title" content="Flyright Blog" />
-					<meta name="description" content="All blog posts from Flyright." />
+					<title>{title}</title>
+					<meta name="title" content={title} />
+					<meta name="description" content={description.description} />
+					<meta name="keywords" content={keywords.join(', ')} />
 					<meta property="og:type" content="website" />
-					<meta property="og:title" content="Flyright" />
-					<meta
-						property="og:description"
-						content="All blog posts from Flyright."
-					/>
-					<meta property="og:url" content="https://flyright.co/blog" />
+					<meta property="og:title" content={title} />
+					<meta property="og:description" content={description.description} />
+					<meta property="og:url" content={`https://flyright.co/${slug}`} />
 				</Helmet>
 				<Container>
 					<Block>

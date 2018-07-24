@@ -24,19 +24,19 @@ class Home extends React.Component {
 	}
 
 	render() {
+		const page = this.props.data.allContentfulPage.edges
+		const { title, slug, description, keywords } = page[0].node
+
 		return (
 			<Wrapper padding="0 1em">
 				<Helmet>
-					<title>Flyright</title>
-					<meta name="title" content="Flyright" />
-					<meta name="description" content="The all-in-one travel companion" />
-					<meta name="keywords" content="Travel, flight, international" />
+					<title>{title}</title>
+					<meta name="title" content={title} />
+					<meta name="description" content={description.description} />
+					<meta name="keywords" content={keywords.join(', ')} />
 					<meta property="og:type" content="website" />
-					<meta property="og:title" content="Flyright" />
-					<meta
-						property="og:description"
-						content="The all-in-one travel companion"
-					/>
+					<meta property="og:title" content={title} />
+					<meta property="og:description" content={description.description} />
 					<meta property="og:url" content="https://flyright.co" />
 				</Helmet>
 			</Wrapper>
@@ -53,6 +53,7 @@ export const homePageQuery = graphql`
 				node {
 					id
 					title
+					slug
 					description {
 						description
 					}
