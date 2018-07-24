@@ -44,7 +44,7 @@ class Layout extends React.Component {
 					</noscript>
 				</Helmet>
 				<Header />
-				{children()}
+				<div style={{ padding: '5rem 0 0 0' }}>{children()}</div>
 				<Footer />
 			</div>
 		)
