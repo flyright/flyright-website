@@ -47,9 +47,7 @@ const Container = styled(Link)`
 	}
 
 	${media.tab`
-		max-width: 400px;
-	`} ${media.desk`
-		max-width: 400px;
+		max-width: 350px;
 	`};
 `
 

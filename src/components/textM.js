@@ -7,7 +7,7 @@ const TextM = styled.div`
 	font-size: 18px;
 	line-height: 28px;
 	color: ${props => (props.color ? props.color : dark)};
-	letter-spacing: 0.5px;
+	letter-spacing: 0.2px;
 	padding: ${props => (props.padding ? props.padding : `0.5em 0`)};
 	text-align: ${props => (props.center ? `center` : `left`)};
 
