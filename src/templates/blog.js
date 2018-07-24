@@ -100,7 +100,7 @@ class Blog extends React.Component {
 					<meta property="og:description" content={description.description} />
 					<meta property="og:url" content={`https://flyright.co/${slug}`} />
 				</Helmet>
-				<Container>
+				<Column>
 					<Block>
 						<TextXL center padding="0.5em 0">
 							Blog
@@ -133,7 +133,7 @@ class Blog extends React.Component {
 								})}
 						</Filter>
 					</Block>
-				</Container>
+				</Column>
 				<Container role="main">
 					{currentFilter !== ''
 						? filteredPosts.map(post => <Card post={post} key={post.node.id} />)

@@ -17,27 +17,27 @@ const Header = props => {
 	return (
 		<Bar>
 			<HeaderWrapper>
-			<Row center padding="0 0 0.2em 0">
-				<LinkInternal to="/" borderless aria-label="Link to home">
-					<Row center>
-						<LogoIcon />
-						<LogoWords />
-					</Row>
-				</LinkInternal>
-			</Row>
-			<Row center padding="0 0 0.2em 0">
-				<Button>
-					<IconIos />
-					iOS
-				</Button>
-				<Button>
-					<IconAndroid />
-					Android
-				</Button>
-				<Block>
-					<IconMenu />
-				</Block>
-			</Row>
+				<Row center padding="0 0 0.2em 0">
+					<LinkInternal to="/" borderless aria-label="Link to home">
+						<Row center>
+							<LogoIcon />
+							<LogoWords />
+						</Row>
+					</LinkInternal>
+				</Row>
+				<Row center padding="0 0 0.2em 0">
+					<Button>
+						<IconIos />
+						iOS
+					</Button>
+					<Button>
+						<IconAndroid />
+						Android
+					</Button>
+					<Block>
+						<IconMenu />
+					</Block>
+				</Row>
 			</HeaderWrapper>
 		</Bar>
 	)

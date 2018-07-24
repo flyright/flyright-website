@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import media from '../utils/media'
 
-const HeaderWrapper = styled.div`
+const FooterWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 74px;
+	height: 100%;
 	width: 100%;
 	padding: 0 0.5em;
 	${media.mbl`
@@ -14,10 +14,9 @@ const HeaderWrapper = styled.div`
 	${media.tab`
 		padding: 0 1.5em;
 	`} ${media.desk`
-		height: 68px;
 		max-width: 960px;
 		margin: 0 auto;
 	`};
 `
 
-export default HeaderWrapper
+export default FooterWrapper

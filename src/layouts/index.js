@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import './index.css'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
+import Footer from '../components/footer'
 import faviconApple from '../assets/favicon/apple-touch-icon.png'
 import favicon32 from '../assets/favicon/favicon-32x32.png'
 import favicon16 from '../assets/favicon/favicon-16x16.png'
@@ -44,6 +45,7 @@ class Layout extends React.Component {
 				</Helmet>
 				<Header />
 				{children()}
+				<Footer />
 			</div>
 		)
 	}

@@ -5,7 +5,7 @@ import media from '../utils/media'
 const TextL = styled.div`
 	font-family: Barlow, sans-serif;
 	font-size: 32px;
-	color: ${dark};
+	color: ${props => (props.color ? props.color : dark)};
 	line-height: 42px;
 	letter-spacing: 0.2px;
 	padding: ${props => (props.padding ? props.padding : `auto`)};
