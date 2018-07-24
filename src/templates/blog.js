@@ -145,8 +145,20 @@ class Blog extends React.Component {
 
 export default Blog
 
-export const blogQuery = graphql`
-	query blogPageQuery {
+export const blogPageQuery = graphql`
+	query blogPageQuery($id: String!) {
+		allContentfulPage(filter: { id: { eq: $id } }) {
+			edges {
+				node {
+					id
+					title
+					description {
+						description
+					}
+					keywords
+				}
+			}
+		}
 		allContentfulBlogPost(sort: { fields: [date], order: DESC }) {
 			edges {
 				node {

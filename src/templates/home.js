@@ -15,7 +15,7 @@ import LinkExternal from '../components/linkExternal'
 import Card from '../components/card'
 import { light } from '../utils/colors'
 
-class Index extends React.Component {
+class Home extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -44,4 +44,21 @@ class Index extends React.Component {
 	}
 }
 
-export default Index
+export default Home
+
+export const homePageQuery = graphql`
+	query homePageQuery($id: String!) {
+		allContentfulPage(filter: { id: { eq: $id } }) {
+			edges {
+				node {
+					id
+					title
+					description {
+						description
+					}
+					keywords
+				}
+			}
+		}
+	}
+`

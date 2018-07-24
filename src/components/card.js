@@ -13,7 +13,7 @@ const Card = props => {
 	const post = props.post.node
 
 	return (
-		<Container to={post.slug} key={post.id}>
+		<Container to={`/blog/${post.slug}`} key={post.id}>
 			<Block width="100%">
 				<Img
 					sizes={post.previewImage.sizes}
