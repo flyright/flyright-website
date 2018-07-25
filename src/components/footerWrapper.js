@@ -9,6 +9,7 @@ const FooterWrapper = styled.div`
 	${media.desk`
 		max-width: 750px;
 		margin: 0 auto;
+		padding: 0.5em 0 1em 0;
 	`};
 `
 
