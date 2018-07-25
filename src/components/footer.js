@@ -42,22 +42,22 @@ const Footer = props => {
 								Company
 							</TextL>
 							<LinkInternal footer to={about}>
-								<TextM color={white} padding="0.15em 0">
+								<TextM smaller color={white} padding="0.1em 0">
 									About
 								</TextM>
 							</LinkInternal>
 							<LinkInternal footer to={blog}>
-								<TextM color={white} padding="0.15em 0">
+								<TextM smaller color={white} padding="0.1em 0">
 									Blog
 								</TextM>
 							</LinkInternal>
 							<LinkInternal footer to={roadmap}>
-								<TextM color={white} padding="0.15em 0">
+								<TextM smaller color={white} padding="0.1em 0">
 									Roadmap
 								</TextM>
 							</LinkInternal>
 							<LinkInternal footer to={presskit}>
-								<TextM color={white} padding="0.15em 0">
+								<TextM smaller color={white} padding="0.1em 0">
 									Press Kit
 								</TextM>
 							</LinkInternal>
@@ -72,22 +72,22 @@ const Footer = props => {
 								target="_blank"
 								rel="noopener"
 							>
-								<TextM color={white} padding="0.15em 0">
+								<TextM smaller color={white} padding="0.1em 0">
 									Android
 								</TextM>
 							</LinkExternal>
 							<LinkExternal footer href={ios} target="_blank" rel="noopener">
-								<TextM color={white} padding="0.15em 0">
+								<TextM smaller color={white} padding="0.1em 0">
 									iOS
 								</TextM>
 							</LinkExternal>
 							<LinkExternal footer href={web} target="_blank" rel="noopener">
-								<TextM color={white} padding="0.15em 0">
+								<TextM smaller color={white} padding="0.1em 0">
 									Web
 								</TextM>
 							</LinkExternal>
 							<LinkInternal footer to={api}>
-								<TextM color={white} padding="0.15em 0">
+								<TextM smaller color={white} padding="0.1em 0">
 									API
 								</TextM>
 							</LinkInternal>
@@ -99,7 +99,7 @@ const Footer = props => {
 								Support
 							</TextL>
 							<LinkExternal footer href={faq} target="_blank" rel="noopener">
-								<TextM color={white} padding="0.15em 0">
+								<TextM smaller color={white} padding="0.1em 0">
 									FAQ
 								</TextM>
 							</LinkExternal>
@@ -109,7 +109,7 @@ const Footer = props => {
 								target="_blank"
 								rel="noopener"
 							>
-								<TextM color={white} padding="0.15em 0">
+								<TextM smaller color={white} padding="0.1em 0">
 									Twitter
 								</TextM>
 							</LinkExternal>
@@ -119,12 +119,12 @@ const Footer = props => {
 								Legal
 							</TextL>
 							<LinkInternal footer to={terms}>
-								<TextM color={white} padding="0.15em 0">
+								<TextM smaller color={white} padding="0.1em 0">
 									Terms of Service
 								</TextM>
 							</LinkInternal>
 							<LinkInternal footer to={privacy}>
-								<TextM color={white} padding="0.15em 0">
+								<TextM smaller color={white} padding="0.1em 0">
 									Privacy Policy
 								</TextM>
 							</LinkInternal>
