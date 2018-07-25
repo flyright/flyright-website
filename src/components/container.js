@@ -9,7 +9,7 @@ const Container = styled.div`
 	${media.tab`
 		flex-direction: row;
 		flex-wrap: wrap;
-		align-items: stretch;
+		align-items: ${props => (props.footer ? `flex-start` : `stretch`)};
 		justify-content: center;
 	`};
 `

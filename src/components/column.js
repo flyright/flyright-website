@@ -7,6 +7,11 @@ const Column = styled.div`
 	align-items: ${props => (props.left ? `left` : `center`)};
 	padding: ${props => (props.padding ? props.padding : `auto`)};
 	margin: ${props => (props.margin ? props.margin : `auto`)};
+	width: ${props => (props.footer ? `100px` : `auto`)};
+
+	${media.mbl`
+		width: ${props => (props.footer ? `120px` : `auto`)};
+	`};
 `
 
 export default Column

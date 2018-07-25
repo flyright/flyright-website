@@ -5,7 +5,7 @@ import media from '../utils/media'
 const TextL = styled.div`
 	font-family: Barlow, sans-serif;
 	font-weight: 600;
-	font-size: 25px;
+	font-size: ${props => (props.smaller ? `23px` : `25px`)};
 	color: ${props => (props.color ? props.color : dark)};
 	line-height: 38px;
 	letter-spacing: 0.2px;
@@ -13,7 +13,7 @@ const TextL = styled.div`
 	text-align: ${props => (props.center ? `center` : `left`)};
 
 	${media.tab`
-		font-size: 28px;
+		${props => (props.smaller ? `25px` : `28px`)}
 		line-height: 42px;
 	`};
 `

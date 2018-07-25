@@ -12,6 +12,10 @@ const LinkExternal = styled.a`
 	border-bottom: ${props => (props.border ? `2.5px solid ${purple}` : `none`)};
 	padding: ${props => (props.border ? `0 0 0.15em 0` : `none`)};
 	margin: 0;
+
+	&:hover div {
+		color: ${props => (props.footer ? purple : white)};
+	}
 `
 
 export default LinkExternal

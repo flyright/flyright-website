@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import { dark, purple } from '../utils/colors'
+import { dark, white, purple } from '../utils/colors'
 
 const LinkInternal = styled(Link)`
 	color: ${dark};
@@ -13,6 +13,10 @@ const LinkInternal = styled(Link)`
 	border-bottom: ${props => (props.border ? `2.5px solid ${purple}` : `none`)};
 	padding: ${props => (props.border ? `0 0 0.15em 0` : `none`)};
 	margin: 0;
+
+	&:hover div {
+		color: ${props => (props.footer ? purple : white)};
+	}
 `
 
 export default LinkInternal

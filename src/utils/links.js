@@ -12,6 +12,7 @@ const links = {
 	api: 'api',
 	faq: 'faq',
 	twitter: '', // external
+	productHunt: '', // external
 	terms: 'terms',
 	privacy: 'privacy',
 }
