@@ -51,12 +51,8 @@ const EmojiBlog = () => (
 )
 
 const Svg = styled.svg`
-	width: 40px;
-	height: 40px;
-	${media.desk`
-		width: 44px;
-		height: 44px;
-	`};
+	width: 45px;
+	height: 45px;
 `
 
 export default EmojiBlog

@@ -7,14 +7,14 @@ const TextXL = styled.div`
 	font-weight: 600;
 	font-size: 38px;
 	color: ${props => (props.color ? props.color : dark)};
-	line-height: 48px;
+	line-height: 52px;
 	letter-spacing: 0.2px;
 	padding: ${props => (props.padding ? props.padding : `auto`)};
 	text-align: ${props => (props.center ? `center` : `left`)};
 
 	${media.tab`
 		font-size: 42px;
-		line-height: 56px;
+		line-height: 60px;
 	`};
 `
 

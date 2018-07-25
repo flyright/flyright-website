@@ -4,7 +4,7 @@ import media from '../utils/media'
 
 const TextM = styled.div`
 	font-family: Barlow, sans-serif;
-	font-size: 18px;
+	font-size: 19px;
 	line-height: 28px;
 	color: ${props => (props.color ? props.color : dark)};
 	letter-spacing: 0.2px;
@@ -12,8 +12,7 @@ const TextM = styled.div`
 	text-align: ${props => (props.center ? `center` : `left`)};
 
 	${media.desk`
-		font-size: 19px;
-		line-height: 31px;
+		line-height: 32px;
 	`};
 `
 
