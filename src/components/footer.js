@@ -119,7 +119,12 @@ const Footer = props => {
 								Legal
 							</TextL>
 							<LinkInternal footer to={terms}>
-								<TextM smaller color={white} padding="0.1em 0">
+								<TextM
+									smaller
+									color={white}
+									padding="0.1em 0"
+									style={{ lineHeight: '26px' }}
+								>
 									Terms of Service
 								</TextM>
 							</LinkInternal>
