@@ -11,7 +11,7 @@ import LinkInternal from '../components/linkInternal'
 class MissingRoute extends React.Component {
 	render() {
 		return (
-			<Wrapper padding="0 1em">
+			<Wrapper padding="25vh 0">
 				<Column padding="2em 0">
 					<TextXL>404</TextXL>
 					<TextM center padding="2em 0" style={{ width: '250px' }}>
