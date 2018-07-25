@@ -23,7 +23,10 @@ const Card = props => {
 			</Block>
 			<Block padding="2em">
 				<TextL>{post.title}</TextL>
-				<TextM padding="0.75em 0" style={{ fontSize: '18px', lineHeight: '30px' }}>
+				<TextM
+					padding="0.75em 0"
+					style={{ fontSize: '18px', lineHeight: '30px' }}
+				>
 					{post.description.description}
 				</TextM>
 				<TextS color={light}>{post.date}</TextS>
@@ -50,6 +53,11 @@ const Container = styled(Link)`
 
 	${media.tab`
 		max-width: 300px;
+		margin: 1.25em 1em;
+	`};
+
+	${media.desk`
+		margin: 1.5em 1em;
 	`};
 `
 
