@@ -56,7 +56,7 @@ class BlogPost extends React.Component {
 						<Filter article margin="0.75em 0">
 							{category.map(item => (
 								<Button
-									article
+									left
 									key={item}
 									onClick={() =>
 										navigateTo({

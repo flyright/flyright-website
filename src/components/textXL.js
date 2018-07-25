@@ -4,7 +4,7 @@ import media from '../utils/media'
 
 const TextXL = styled.div`
 	font-family: Barlow, sans-serif;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 38px;
 	color: ${props => (props.color ? props.color : dark)};
 	line-height: 48px;

@@ -16,6 +16,7 @@ import LinkExternal from '../components/linkExternal'
 import Card from '../components/card'
 import Button from '../components/button'
 import Filter from '../components/filter'
+import EmojiBlog from '../components/emojiBlog'
 import uniq from 'lodash/uniq'
 import { white } from '../utils/colors'
 
@@ -100,12 +101,13 @@ class Blog extends React.Component {
 					<meta property="og:description" content={description.description} />
 					<meta property="og:url" content={`https://flyright.co/${slug}`} />
 				</Helmet>
-				<Column>
-					<Block>
-						<TextXL center padding="0.5em 0">
+				<Column padding="1em 0 2em 0">
+					<Column padding="2em 0 0 0">
+						<EmojiBlog />
+						<TextXL center padding="0.5em 0 0.25em 0">
 							Blog
 						</TextXL>
-					</Block>
+					</Column>
 					<Block>
 						<Filter>
 							<Button

@@ -6,11 +6,11 @@ const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 
-	${media.desk`
+	${media.tab`
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-items: stretch;
-		justify-content: space-evenly;
+		justify-content: center;
 	`};
 `
 

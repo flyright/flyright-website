@@ -34,7 +34,7 @@ const Container = styled(Link)`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 1em 0;
+	margin: 1em;
 	text-decoration: none;
 	background-color: ${white};
 	box-shadow: 0 1px 3px rgba(2, 8, 54, 0), 0 1px 7px rgba(2, 8, 54, 0.1);
@@ -47,7 +47,7 @@ const Container = styled(Link)`
 	}
 
 	${media.tab`
-		max-width: 350px;
+		max-width: 300px;
 	`};
 `
 
