@@ -23,7 +23,9 @@ const Card = props => {
 			</Block>
 			<Block padding="2em">
 				<TextL>{post.title}</TextL>
-				<TextM padding="1em 0">{post.description.description}</TextM>
+				<TextM padding="0.75em 0" style={{ fontSize: '18px', lineHeight: '30px' }}>
+					{post.description.description}
+				</TextM>
 				<TextS color={light}>{post.date}</TextS>
 			</Block>
 		</Container>
