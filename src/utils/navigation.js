@@ -4,7 +4,7 @@ const navigation = {
 	company: [
 		{ text: 'About', slug: 'about', isExternal: false },
 		{ text: 'Blog', slug: 'blog', isExternal: false },
-		{ text: 'Roadmap', roadmap: 'roadmap', isExternal: false },
+		{ text: 'Roadmap', slug: 'roadmap', isExternal: false },
 	],
 	platform: [
 		{ text: 'Android', slug: '', isExternal: true },
