@@ -14,7 +14,7 @@ const LinkExternal = styled.a`
 	margin: 0;
 
 	&:hover div {
-		color: ${props => (props.footer ? purple : white)};
+		color: ${props => (props.footer ? purple : `initial`)};
 	}
 `
 

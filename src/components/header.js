@@ -10,8 +10,9 @@ import LinkInternal from './linkInternal'
 import Block from './block'
 import Row from './row'
 import Button from './button'
+import HeaderDesk from './headerDesk'
 import HeaderWrapper from './headerWrapper'
-import { white, smoke } from '../utils/colors'
+import { white, smoke, acid } from '../utils/colors'
 
 const Header = props => {
 	return (
@@ -25,6 +26,7 @@ const Header = props => {
 						</Row>
 					</LinkInternal>
 				</Row>
+				<HeaderDesk />
 				<Row center padding="0 0 0.2em 0">
 					<Button>
 						<IconIos />
@@ -50,7 +52,7 @@ const Bar = styled.div`
 	left: 0;
 	right: 0;
 	background-color: ${white};
-	border-bottom: 1px solid ${smoke};
+	box-shadow: 0 1px 2px ${smoke};
 `
 
 export default Header

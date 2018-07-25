@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 import { dark } from '../utils/colors'
 import media from '../utils/media'
+import { smoke } from '../utils/colors'
 
 const TextM = styled.div`
 	font-family: Barlow, sans-serif;
+	font-weight: ${props => (props.medium ? `500` : `400`)};
 	font-size: ${props => (props.smaller ? `17px` : `19px`)};
 	line-height: 31px;
 	color: ${props => (props.color ? props.color : dark)};
@@ -17,6 +19,10 @@ const TextM = styled.div`
 	${media.desk`
 		line-height: 34px;
 	`};
+
+	&:hover {
+		background-color: ${props => (props.header ? smoke : `initial`)};
+	}
 `
 
 export default TextM
