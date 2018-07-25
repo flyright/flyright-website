@@ -47,12 +47,12 @@ class BlogPost extends React.Component {
 						content={`https://flyright.co/blog/${slug}`}
 					/>
 				</Helmet>
-				<Wrapper content padding="0.5em 0 2em 0" role="main">
+				<Wrapper content padding="0 0 2em 0" role="main">
 					<Content img key={previewImage.id}>
 						<Img sizes={previewImage.sizes} alt={previewImage.title} />
 					</Content>
 					<Content>
-						<TextXL padding="1em 0 0 0">{title}</TextXL>
+						<TextXL padding="0.8em 0 0 0">{title}</TextXL>
 						<Filter article margin="0.75em 0">
 							{category.map(item => (
 								<Button
