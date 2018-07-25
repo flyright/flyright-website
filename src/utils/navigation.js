@@ -1,3 +1,5 @@
+// Data structure used to build navigation headers
+
 const navigation = {
 	company: [
 		{ text: 'About', slug: 'about', isExternal: false },
