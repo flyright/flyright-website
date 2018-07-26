@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from '../utils/media.js'
-import { purple } from '../utils/colors'
+import { purple, white } from '../utils/colors'
 
 const IconTwitter = () => (
 	<Svg

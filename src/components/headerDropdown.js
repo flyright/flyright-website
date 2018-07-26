@@ -43,7 +43,7 @@ class HeaderDropdown extends React.Component {
 									<LinkExternal href={item.slug} target="_blank" rel="noopener">
 										<TextM
 											smaller
-											header
+											headerDesk
 											padding="0.5em 1.25em"
 											key={item.text}
 										>
@@ -54,7 +54,7 @@ class HeaderDropdown extends React.Component {
 									<LinkInternal to={item.slug}>
 										<TextM
 											smaller
-											header
+											headerDesk
 											padding="0.5em 1.25em"
 											key={item.text}
 										>

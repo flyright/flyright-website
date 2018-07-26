@@ -5,6 +5,7 @@ const navigation = {
 		{ text: 'About', slug: 'about', isExternal: false },
 		{ text: 'Blog', slug: 'blog', isExternal: false },
 		{ text: 'Roadmap', slug: 'roadmap', isExternal: false },
+		{ text: 'Press Kit', slug: 'presskit', isExternal: true },
 	],
 	platform: [
 		{ text: 'Android', slug: '', isExternal: true },

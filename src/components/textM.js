@@ -12,6 +12,8 @@ const TextM = styled.div`
 	letter-spacing: 0.2px;
 	padding: ${props => (props.padding ? props.padding : `0.5em 0`)};
 	text-align: ${props => (props.center ? `center` : `left`)};
+	border-bottom: ${props => (props.headerMbl ? `1px solid ${smoke}` : `none`)};
+
 	${media.tab`
 		font-size: ${props => (props.smaller ? `18px` : `20px`)};
 		line-height: 33px;
@@ -21,7 +23,7 @@ const TextM = styled.div`
 	`};
 
 	&:hover {
-		background-color: ${props => (props.header ? smoke : `initial`)};
+		background-color: ${props => (props.headerDesk ? smoke : `initial`)};
 	}
 `
 
