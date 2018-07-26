@@ -2,19 +2,19 @@
 // Unless otherwise described, links are to internal pages
 
 const links = {
-	about: 'about',
-	blog: 'blog',
-	roadmap: 'roadmap',
+	about: '/about',
+	blog: '/blog',
+	roadmap: '/roadmap',
 	presskit: '', // download
 	android: '', // external
 	ios: '', // external
 	web: '', // subdomain web.flyright.co
-	api: 'api',
-	faq: 'faq',
+	api: '/api',
+	faq: '/faq',
 	twitter: '', // external
 	productHunt: '', // external
-	terms: 'terms',
-	privacy: 'privacy',
+	terms: '/terms',
+	privacy: '/privacy',
 }
 
 export default links
