@@ -13,7 +13,7 @@ const TextL = styled.div`
 	text-align: ${props => (props.center ? `center` : `left`)};
 
 	${media.tab`
-		${props => (props.smaller ? `24px` : `28px`)}
+		font-size: ${props => (props.smaller ? `24px` : `28px`)};
 		line-height: 42px;
 	`};
 `
