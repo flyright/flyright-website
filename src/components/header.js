@@ -48,7 +48,7 @@ class Header extends React.Component {
 				right: 0,
 				left: 'none',
 				width: '90vw',
-				height: 'fit-content',
+				height: '100%',
 				backgroundColor: white,
 				border: 'none',
 				borderRadius: '5px',
@@ -85,7 +85,7 @@ class Header extends React.Component {
 						isOpen={this.state.showModal}
 						onRequestClose={this.toggleModal}
 						style={modalStyles}
-						contentLabel="Example Modal"
+						contentLabel="Mobile Navigation Menu"
 					>
 						<Block onClick={this.toggleModal}>
 							<IconClose />
@@ -93,7 +93,7 @@ class Header extends React.Component {
 						<HeaderMbl />
 						<Row
 							center
-							padding="0 0 0.2em 0"
+							padding="0 0 3em 0"
 							style={{ justifyContent: 'center' }}
 						>
 							<Button>
