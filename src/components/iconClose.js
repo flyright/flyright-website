@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import media from '../utils/media'
 import { dark } from '../utils/colors'
 
-const CloseX = () => (
+const IconClose = () => (
 	<Svg
 		width="21px"
 		height="20px"
@@ -43,6 +43,13 @@ const Svg = styled.svg`
 	height: 20px;
 	margin: 0 0 0 2em;
 	cursor: pointer;
+	padding: 1.5em 0.75em;
+	${media.mbl`
+		padding: 1.5em 1em;
+	`};
+	${media.tab`
+		padding: 1.5em;
+	`};
 `
 
-export default CloseX
+export default IconClose

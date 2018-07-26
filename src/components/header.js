@@ -6,6 +6,7 @@ import LogoWords from './logoWords'
 import IconAndroid from './iconAndroid'
 import IconIos from './iconIos'
 import IconMenu from './iconMenu'
+import IconClose from './iconClose'
 import LinkInternal from './linkInternal'
 import LinkExternal from './linkExternal'
 import Block from './block'
@@ -14,8 +15,6 @@ import Button from './button'
 import HeaderDesk from './headerDesk'
 import HeaderWrapper from './headerWrapper'
 import Modal from 'react-modal'
-import CloseX from './closeX'
-import CloseXBox from './closeXBox'
 import HeaderMbl from './headerMbl'
 import { white, smoke, acid } from '../utils/colors'
 
@@ -88,9 +87,9 @@ class Header extends React.Component {
 						style={modalStyles}
 						contentLabel="Example Modal"
 					>
-						<CloseXBox onClick={this.toggleModal}>
-							<CloseX />
-						</CloseXBox>
+						<Block onClick={this.toggleModal}>
+							<IconClose />
+						</Block>
 						<HeaderMbl />
 						<Row
 							center

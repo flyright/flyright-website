@@ -21,7 +21,7 @@ const Header = styled.div`
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin: 1em 0.25em;
+	margin: 2em 0.25em;
 	justify-content: center;
 `
 
