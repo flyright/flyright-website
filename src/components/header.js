@@ -52,7 +52,6 @@ class Header extends React.Component {
 				backgroundColor: white,
 				border: 'none',
 				borderRadius: '5px',
-				padding: '20px 0 40px 0',
 			},
 		}
 
