@@ -48,7 +48,7 @@ class Header extends React.Component {
 				right: 0,
 				left: 'none',
 				width: '90vw',
-				height: '100%',
+				height: '100vh',
 				backgroundColor: white,
 				border: 'none',
 				borderRadius: '5px',

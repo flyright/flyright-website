@@ -8,6 +8,7 @@ body {
 	position: relative;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
