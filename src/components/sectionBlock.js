@@ -3,7 +3,7 @@ import media from '../utils/media'
 
 const SectionBlock = styled.div`
 	width: 300px;
-	height: 300px;
+	height: ${props => (props.text ? `auto` : `300px`)};
 	max-width: ${props => (props.text ? `300px` : `none`)};
 	margin: ${props => (props.text ? `0 auto` : `initial`)};
 	& div {
@@ -12,7 +12,7 @@ const SectionBlock = styled.div`
 
 	${media.mbl`
 		width: 350px;
-		height: 350px;
+		height: ${props => (props.text ? `auto` : `350px`)};
 	`};
 
 	${media.tab`
@@ -24,7 +24,18 @@ const SectionBlock = styled.div`
 		padding: ${props => (props.text ? `1em` : `none`)};
 		margin: ${props => (props.text ? `initial` : `initial`)};
 		& div {
-			text-align: ${props => (props.text ? `left` : `initial`)};
+			text-align: ${props => {
+				switch (props.layout) {
+					case `Left`:
+						return `right`
+						break
+					case `Right`:
+						return `left`
+						break
+					default:
+						return `left`
+				}
+			}};
 		}
 	`};
 	${media.desk`

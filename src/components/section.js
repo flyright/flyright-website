@@ -11,13 +11,13 @@ class Section extends React.Component {
 		const item = this.props
 
 		return (
-			<SectionContainer>
+			<SectionContainer layout={item.layout}>
 				<SectionBlock width="500px" height="500px">
 					{item.image && (
 						<img src={item.image.file.url} width="100%" height="100%" />
 					)}
 				</SectionBlock>
-				<SectionBlock text>
+				<SectionBlock text layout={item.layout}>
 					<TextL padding="0.75em 0">{item.title}</TextL>
 					<TextM padding="0 0 2em 0">{item.body.body}</TextM>
 				</SectionBlock>
