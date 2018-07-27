@@ -1,18 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from '../utils/media.js'
+import { white, dark } from '../utils/colors'
 
-const IconAndroid = () => (
+const IconAndroid = props => (
 	<Svg
 		viewBox="0 0 17 19"
 		xmlns="http://www.w3.org/2000/svg"
 		aria-labelledby="iconAndroid"
+		style={{ margin: props.bigger ? `0 0.4em 0 0` : `0 0.4em 0.1em 0` }}
 	>
 		<title id="iconAndroid">Google Play Store</title>
 		<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g
 				transform="translate(-212.000000, -29.000000)"
-				fill="#020836"
+				fill={props.white ? white : dark}
 				fillRule="nonzero"
 			>
 				<g>
@@ -31,7 +33,6 @@ const Svg = styled.svg`
 	width: 17px;
 	height: 19px;
 	padding: 1px 0;
-	margin: 0 0.4em 0.1em 0;
 `
 
 export default IconAndroid

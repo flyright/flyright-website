@@ -1,20 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from '../utils/media.js'
+import { white, dark } from '../utils/colors'
 
-const IconIos = () => (
+const IconIos = props => (
 	<Svg
 		width="16px"
 		height="21px"
 		viewBox="0 0 16 21"
 		xmlns="http://www.w3.org/2000/svg"
 		aria-labelledby="iconIos"
+		style={{ margin: props.bigger ? `0 0.4em 0.05em 0` : `0 0.4em 0.2em 0` }}
 	>
 		<title id="iconIos">App Store</title>
 		<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g
 				transform="translate(-114.000000, -27.000000)"
-				fill="#020836"
+				fill={props.white ? white : dark}
 				fillRule="nonzero"
 			>
 				<g>
@@ -35,7 +37,6 @@ const IconIos = () => (
 const Svg = styled.svg`
 	width: 16px;
 	height: 21px;
-	margin: 0 0.4em 0.2em 0;
 `
 
 export default IconIos
