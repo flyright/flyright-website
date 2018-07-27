@@ -5,7 +5,6 @@ const SectionContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 1em;
 
 	${media.tab`
 		flex-direction: ${props => {
@@ -21,6 +20,7 @@ const SectionContainer = styled.div`
 			}
 		}};
 		justify-content: center;
+		padding: 1em;
 	`};
 
 	${media.desk`
