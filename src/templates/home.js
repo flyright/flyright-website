@@ -4,6 +4,7 @@ import TextXS from '../components/textXS'
 import TextS from '../components/textS'
 import TextM from '../components/textM'
 import TextL from '../components/textL'
+import TextXL from '../components/textXL'
 import TextXXL from '../components/textXXL'
 import Wrapper from '../components/wrapper'
 import Container from '../components/container'
@@ -26,7 +27,7 @@ class Home extends React.Component {
 	render() {
 		const page = this.props.data.allContentfulPage.edges
 		const { title, slug, description, keywords } = page[0].node // Page info
-		const items = page[0].node.content.content // Array of page content items
+		const containers = page[0].node.content.content // Array of page content items
 
 		return (
 			<div>
@@ -42,7 +43,17 @@ class Home extends React.Component {
 						<meta property="og:url" content="https://flyright.co" />
 					</Helmet>
 				</Wrapper>
-				{items && items.map(item => <Section {...item} key={item.id} />)}
+				{containers &&
+					containers.map(container => (
+						<Block padding="2.5em 0" key={container.id}>
+							<TextXL center padding="0 1em" key={container.title}>
+								{container.title}
+							</TextXL>
+							{container.content.map(item => (
+								<Section {...item} key={item.id} />
+							))}
+						</Block>
+					))}
 			</div>
 		)
 	}
@@ -64,19 +75,25 @@ export const homePageQuery = graphql`
 					keywords
 					content {
 						content {
-							... on ContentfulSection {
+							... on ContentfulContainer {
 								id
 								title
-								body {
-									body
-								}
-								image {
-									title
-									sizes {
-										...GatsbyContentfulSizes_withWebp
+								content {
+									... on ContentfulSection {
+										id
+										title
+										body {
+											body
+										}
+										image {
+											title
+											sizes {
+												...GatsbyContentfulSizes_withWebp
+											}
+										}
+										layout
 									}
 								}
-								layout
 							}
 						}
 					}

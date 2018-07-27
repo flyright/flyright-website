@@ -14,7 +14,9 @@ class Section extends React.Component {
 		return (
 			<SectionContainer layout={item.layout}>
 				<SectionBlock width="500px" height="500px">
-					{item.image && <Img sizes={item.image.sizes} alt={item.title} />}
+					{item.image && (
+						<Img sizes={item.image.sizes} alt={item.description} />
+					)}
 				</SectionBlock>
 				<SectionBlock text layout={item.layout}>
 					<TextL padding="0.75em 0">{item.title}</TextL>
