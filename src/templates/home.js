@@ -72,9 +72,8 @@ export const homePageQuery = graphql`
 								}
 								image {
 									title
-									description
-									file {
-										url
+									sizes {
+										...GatsbyContentfulSizes_withWebp
 									}
 								}
 								layout

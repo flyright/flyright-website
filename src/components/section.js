@@ -5,6 +5,7 @@ import SectionContainer from './sectionContainer'
 import SectionBlock from './sectionBlock'
 import TextL from './textL'
 import TextM from './textM'
+import Img from 'gatsby-image'
 
 class Section extends React.Component {
 	render() {
@@ -13,9 +14,7 @@ class Section extends React.Component {
 		return (
 			<SectionContainer layout={item.layout}>
 				<SectionBlock width="500px" height="500px">
-					{item.image && (
-						<img src={item.image.file.url} width="100%" height="100%" />
-					)}
+					{item.image && <Img sizes={item.image.sizes} alt={item.title} />}
 				</SectionBlock>
 				<SectionBlock text layout={item.layout}>
 					<TextL padding="0.75em 0">{item.title}</TextL>
