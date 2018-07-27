@@ -42,7 +42,7 @@ class Home extends React.Component {
 					<meta property="og:description" content={description.description} />
 					<meta property="og:url" content="https://flyright.co" />
 				</Helmet>
-				<Block padding="2.5em 0">
+				<Block padding="5em 0 2.5em 0">
 					<TextXL center padding="0 1em" key={content[0].title}>
 						{content[0].title}
 					</TextXL>
@@ -50,6 +50,15 @@ class Home extends React.Component {
 				</Block>
 				<Block>
 					<Cta cta={content[1]} />
+				</Block>
+				<Block padding="5em 0 2.5em 0">
+					<TextXL center padding="0 1em" key={content[2].title}>
+						{content[2].title}
+					</TextXL>
+					{content[2].content.map(item => <Section {...item} key={item.id} />)}
+				</Block>
+				<Block>
+					<Cta cta={content[3]} />
 				</Block>
 			</div>
 		)

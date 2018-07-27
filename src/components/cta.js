@@ -7,6 +7,8 @@ import Column from './column'
 import Row from './row'
 import Block from './block'
 import Button from './button'
+import LinkExternal from './linkExternal'
+import LinkInternal from './linkInternal'
 import IconIos from './iconIos'
 import IconAndroid from './iconAndroid'
 import ReactMarkdown from 'react-markdown'
@@ -18,12 +20,22 @@ const Cta = props => {
 		<Bar>
 			{items &&
 				items.map(item => (
-					<Column key={item.id} style={{ padding: '1.5em 0' }}>
-						<TextXL key={item.title} color={white}>
+					<Column
+						key={item.id}
+						style={{
+							padding: '3em 0',
+						}}
+					>
+						<TextXL key={item.title} color={white} padding="0.2em 0">
 							{item.title}
 						</TextXL>
-						<Column>
-							<Block padding="1em 0">
+						<Column
+							style={{
+								flexDirection:
+									item.layout === `Top` ? `column-reverse` : `column`,
+							}}
+						>
+							<Block>
 								{item.hasDownloadButtons && (
 									<Row center style={{ justifyContent: 'center' }}>
 										<Button purple bigger>
