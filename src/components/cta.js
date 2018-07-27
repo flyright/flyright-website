@@ -23,7 +23,7 @@ const Cta = props => {
 					<Column
 						key={item.id}
 						style={{
-							padding: '3em 0',
+							padding: '2.5em 0 3em 0',
 						}}
 					>
 						<TextXL key={item.title} center color={white} padding="0.3em">
