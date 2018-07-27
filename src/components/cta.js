@@ -26,7 +26,7 @@ const Cta = props => {
 							padding: '3em 0',
 						}}
 					>
-						<TextXL key={item.title} color={white} padding="0.2em 0">
+						<TextXL key={item.title} center color={white} padding="0.3em">
 							{item.title}
 						</TextXL>
 						<Column
@@ -72,7 +72,7 @@ const Cta = props => {
 							</Block>
 							<Block>
 								{item.body && (
-									<TextM medium color={white}>
+									<TextM center medium color={white} padding="0 1em">
 										{item.body.body}
 									</TextM>
 								)}
