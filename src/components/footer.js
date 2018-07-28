@@ -99,11 +99,11 @@ const Footer = props => {
 							<TextL smaller color={white} padding="0 0 0.5em 0">
 								Support
 							</TextL>
-							<LinkExternal footer href={faq} target="_blank" rel="noopener">
+							<LinkInternal footer to={faq}>
 								<TextM smaller color={white} padding="0.1em 0">
 									FAQ
 								</TextM>
-							</LinkExternal>
+							</LinkInternal>
 							<LinkInternal footer to={contact}>
 								<TextM smaller color={white} padding="0.1em 0">
 									Contact

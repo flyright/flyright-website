@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import media from '../utils/media.js'
+import media from '../utils/media'
 
 const EmojiBlog = () => (
 	<Svg
@@ -8,7 +8,7 @@ const EmojiBlog = () => (
 		xmlns="http://www.w3.org/2000/svg"
 		aria-labelledby="emojiBlog"
 	>
-		<title id="emojiBlog">Writing Hand Emoji</title>
+		<title id="emojiBlog">Writing hand emoji</title>
 		<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g transform="translate(-690.000000, -152.000000)" fillRule="nonzero">
 				<g transform="translate(689.000000, 152.000000)">

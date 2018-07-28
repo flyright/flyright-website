@@ -9,6 +9,7 @@ import Wrapper from '../components/wrapper'
 import Container from '../components/container'
 import Column from '../components/column'
 import Block from '../components/block'
+import EmojiContact from '../components/emojiContact'
 
 class Contact extends React.Component {
 	constructor(props) {
@@ -35,6 +36,14 @@ class Contact extends React.Component {
 					<meta property="og:description" content={description.description} />
 					<meta property="og:url" content={`https://flyright.co/${slug}`} />
 				</Helmet>
+				<Column padding="1em 0 2em 0">
+					<Column padding="2em 0 0 0">
+						<EmojiContact />
+						<TextXL center padding="0.5em 0 0.25em 0">
+							{title}
+						</TextXL>
+					</Column>
+				</Column>
 			</div>
 		)
 	}

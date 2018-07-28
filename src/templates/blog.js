@@ -105,7 +105,7 @@ class Blog extends React.Component {
 					<Column padding="2em 0 0 0">
 						<EmojiBlog />
 						<TextXL center padding="0.5em 0 0.25em 0">
-							Blog
+							{title}
 						</TextXL>
 					</Column>
 					<Block>
