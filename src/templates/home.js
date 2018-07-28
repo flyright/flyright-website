@@ -15,6 +15,7 @@ import LinkInternal from '../components/linkInternal'
 import LinkExternal from '../components/linkExternal'
 import Section from '../components/section'
 import Cta from '../components/cta'
+import Social from '../components/social'
 import { light } from '../utils/colors'
 
 class Home extends React.Component {
@@ -46,8 +47,8 @@ class Home extends React.Component {
 					<TextXXL center padding="0 1em">
 						Travel simply together
 					</TextXXL>
-					<TextM medium center padding="2em" style={{ maxWidth: '300px' }}>
-						Flyright helps you do travel preparation in seconds, not hours
+					<TextM medium center padding="2em" style={{ maxWidth: '310px' }}>
+						Flyright helps you do travel preparation in seconds, not hours.
 					</TextM>
 				</Column>
 				<Block padding="5em 0 2.5em 0">
@@ -68,6 +69,15 @@ class Home extends React.Component {
 				<Block>
 					<Cta cta={content[3]} />
 				</Block>
+				<Column padding="5em 0 4em 0">
+					<TextXL center padding="0 1em">
+						Grow with us
+					</TextXL>
+					<TextM center padding="1em" style={{ maxWidth: '310px' }}>
+						We work in the open. Join the community and shape the journey.
+					</TextM>
+					<Social />
+				</Column>
 			</div>
 		)
 	}
