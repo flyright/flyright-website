@@ -95,12 +95,12 @@ class Header extends React.Component {
 							padding="0 0 3em 0"
 							style={{ justifyContent: 'center' }}
 						>
-							<Button>
-								<IconIos />
+							<Button bigger>
+								<IconIos bigger />
 								iOS
 							</Button>
-							<Button>
-								<IconAndroid />
+							<Button bigger>
+								<IconAndroid bigger />
 								Android
 							</Button>
 						</Row>

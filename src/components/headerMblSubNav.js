@@ -26,13 +26,18 @@ class HeaderMblSubNav extends React.Component {
 					{this.props.items.map(
 						item =>
 							item.isExternal ? (
-								<LinkExternal href={item.slug} target="_blank" rel="noopener">
+								<LinkExternal
+									key={item.slug}
+									href={item.slug}
+									target="_blank"
+									rel="noopener"
+								>
 									<TextM headerMbl padding="0.5em 1.25em" key={item.text}>
 										{item.text}
 									</TextM>
 								</LinkExternal>
 							) : (
-								<LinkInternal to={item.slug}>
+								<LinkInternal key={item.slug} to={item.slug}>
 									<TextM headerMbl padding="0.5em 1.25em" key={item.text}>
 										{item.text}
 									</TextM>
