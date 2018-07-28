@@ -2,10 +2,10 @@
 
 const navigation = {
 	company: [
-		// { text: 'About', slug: '/about', isExternal: false },
+		{ text: 'About', slug: '/about', isExternal: false },
 		{ text: 'Blog', slug: '/blog', isExternal: false },
 		{ text: 'Roadmap', slug: '/roadmap', isExternal: false },
-		{ text: 'Press Kit', slug: '/presskit', isExternal: true },
+		{ text: 'Press Kit', slug: '/press-kit', isExternal: false },
 	],
 	platform: [
 		{ text: 'Android', slug: '/a', isExternal: true },
@@ -15,11 +15,12 @@ const navigation = {
 	],
 	support: [
 		{ text: 'FAQ', slug: '/faq', isExternal: false },
+		{ text: 'Contact', slug: '/contact', isExternal: false },
 		{ text: 'Twitter', slug: '/b', isExternal: true },
 	],
 	legal: [
-		{ text: 'Terms of Service', slug: '/c', isExternal: false },
-		{ text: 'Privacy Policy', slug: '/d', isExternal: false },
+		{ text: 'Terms of Service', slug: '/terms-of-service', isExternal: false },
+		{ text: 'Privacy Policy', slug: '/privacy-policy', isExternal: false },
 	],
 }
 

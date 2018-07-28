@@ -24,6 +24,7 @@ import {
 	ios,
 	web,
 	api,
+	contact,
 	faq,
 	twitter,
 	productHunt,
@@ -103,6 +104,11 @@ const Footer = props => {
 									FAQ
 								</TextM>
 							</LinkExternal>
+							<LinkInternal footer to={contact}>
+								<TextM smaller color={white} padding="0.1em 0">
+									Contact
+								</TextM>
+							</LinkInternal>
 							<LinkExternal
 								footer
 								href={twitter}
