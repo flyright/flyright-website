@@ -42,6 +42,14 @@ class Home extends React.Component {
 					<meta property="og:description" content={description.description} />
 					<meta property="og:url" content="https://flyright.co" />
 				</Helmet>
+				<Column padding="4em 0 12em 0">
+					<TextXXL center padding="0 1em">
+						Travel simply together
+					</TextXXL>
+					<TextM medium center padding="2em" style={{ maxWidth: '300px' }}>
+						Flyright helps you do travel preparation in seconds, not hours
+					</TextM>
+				</Column>
 				<Block padding="5em 0 2.5em 0">
 					<TextXL center padding="0 1em" key={content[0].title}>
 						{content[0].title}
