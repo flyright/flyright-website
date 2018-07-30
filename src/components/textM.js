@@ -7,7 +7,7 @@ const TextM = styled.div`
 	font-family: Barlow, sans-serif;
 	font-weight: ${props => (props.medium ? `500` : `400`)};
 	font-size: ${props => (props.smaller ? `17px` : `19px`)};
-	line-height: 31px;
+	line-height: ${props => (props.smaller ? `26px` : `31px`)};
 	color: ${props => (props.color ? props.color : dark)};
 	letter-spacing: 0.2px;
 	padding: ${props => (props.padding ? props.padding : `0.5em 0`)};
