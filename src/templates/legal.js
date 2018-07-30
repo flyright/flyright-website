@@ -10,6 +10,8 @@ import Container from '../components/container'
 import Column from '../components/column'
 import Block from '../components/block'
 import EmojiLegal from '../components/emojiLegal'
+import ReactMarkdown from 'react-markdown'
+import Content from '../components/content'
 
 class Legal extends React.Component {
 	constructor(props) {
@@ -22,6 +24,7 @@ class Legal extends React.Component {
 	render() {
 		const page = this.props.data.allContentfulPage.edges
 		const { title, slug, description, keywords } = page[0].node // Page info
+		const content = page[0].node.content.content[0].body.body
 		// const content = page[0].node.content.content // Array of page content
 
 		return (
@@ -43,6 +46,11 @@ class Legal extends React.Component {
 							{title}
 						</TextXL>
 					</Column>
+					<Content>
+						<TextM id="markdown">
+							<ReactMarkdown source={content} />
+						</TextM>
+					</Content>
 				</Column>
 			</div>
 		)
@@ -63,6 +71,17 @@ export const legalPageQuery = graphql`
 						description
 					}
 					keywords
+					content {
+						... on ContentfulContainer {
+							content {
+								... on ContentfulBlockText {
+									body {
+										body
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
