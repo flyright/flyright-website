@@ -43,15 +43,16 @@ class Roadmap extends React.Component {
 						<TextXL center padding="0.5em 0 0.25em 0">
 							{title}
 						</TextXL>
+						<TextM center padding="0.5em 2em" style={{ maxWidth: '300px' }}>
+							Our mission is to make travel simple and seamless. Here are our
+							steps along the way.
+						</TextM>
 					</Column>
-					</Column>
-					<Block width="100%" padding="2em 0 0 0">
-						{content &&
-							content.map(section => (
-								<Milestone key={section.id} {...section} />
-							))}
-					</Block>
-
+				</Column>
+				<Block role="main" width="100%" padding="2em 0 0 0">
+					{content &&
+						content.map(section => <Milestone key={section.id} {...section} />)}
+				</Block>
 			</div>
 		)
 	}
