@@ -47,7 +47,7 @@ class Home extends React.Component {
 					<TextXXL center padding="0 1em">
 						Travel simply together
 					</TextXXL>
-					<TextM medium center padding="2em" style={{ maxWidth: '310px' }}>
+					<TextM center padding="2em" style={{ maxWidth: '310px' }}>
 						Flyright helps you do travel preparation in seconds, not hours.
 					</TextM>
 				</Column>
