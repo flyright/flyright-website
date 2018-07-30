@@ -40,7 +40,12 @@ class HeaderDropdown extends React.Component {
 						{this.props.items.map(
 							item =>
 								item.isExternal ? (
-									<LinkExternal href={item.slug} target="_blank" rel="noopener">
+									<LinkExternal
+										key={item.slug}
+										href={item.slug}
+										target="_blank"
+										rel="noopener"
+									>
 										<TextM
 											smaller
 											headerDesk
@@ -51,7 +56,7 @@ class HeaderDropdown extends React.Component {
 										</TextM>
 									</LinkExternal>
 								) : (
-									<LinkInternal to={item.slug}>
+									<LinkInternal key={item.slug} to={item.slug}>
 										<TextM
 											smaller
 											headerDesk

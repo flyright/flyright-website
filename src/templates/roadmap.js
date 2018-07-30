@@ -9,6 +9,7 @@ import Wrapper from '../components/wrapper'
 import Container from '../components/container'
 import Column from '../components/column'
 import Block from '../components/block'
+import Milestone from '../components/milestone'
 import EmojiRoadmap from '../components/emojiRoadmap'
 
 class Roadmap extends React.Component {
@@ -36,7 +37,6 @@ class Roadmap extends React.Component {
 					<meta property="og:description" content={description.description} />
 					<meta property="og:url" content={`https://flyright.co/${slug}`} />
 				</Helmet>
-				{console.log(content)}
 				<Column padding="1em 0 2em 0">
 					<Column padding="2em 0 0 0">
 						<EmojiRoadmap />
@@ -44,6 +44,12 @@ class Roadmap extends React.Component {
 							{title}
 						</TextXL>
 					</Column>
+					<Block width="100%" padding="2em 0">
+						{content &&
+							content.map(section => (
+								<Milestone key={section.id} {...section} />
+							))}
+					</Block>
 				</Column>
 			</div>
 		)

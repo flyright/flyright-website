@@ -6,3 +6,17 @@
 	border-bottom: 2.5px solid #8449ff;
 	color: #020836;
 }
+
+#markdown ul {
+	padding: 0 0 0 1em;
+	margin: 0 0 0.5em 0;
+}
+
+#markdown ul li {
+	list-style: url('../assets/svg/listItem.svg');
+	margin: 0 0 0.25em 0;
+}
+
+.roadmap p {
+	margin: 0 0 0.4em 0;
+}
