@@ -11,6 +11,7 @@ const TextXXL = styled.div`
 	letter-spacing: 0.2px;
 	padding: ${props => (props.padding ? props.padding : `auto`)};
 	text-align: ${props => (props.center ? `center` : `left`)};
+	margin: ${props => (props.margin ? props.margin : `none`)};
 
 	${media.tab`
 		font-size: 50px;

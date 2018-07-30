@@ -11,15 +11,16 @@ const TextM = styled.div`
 	color: ${props => (props.color ? props.color : dark)};
 	letter-spacing: 0.2px;
 	padding: ${props => (props.padding ? props.padding : `0.5em 0`)};
+	margin: ${props => (props.margin ? props.margin : `none`)};
 	text-align: ${props => (props.center ? `center` : `left`)};
 	border-bottom: ${props => (props.headerMbl ? `1px solid ${smoke}` : `none`)};
 
 	${media.tab`
 		font-size: ${props => (props.smaller ? `18px` : `20px`)};
-		line-height: 33px;
+		line-height: ${props => (props.smaller ? `28px` : `33px`)};
 	`};
 	${media.desk`
-		line-height: 34px;
+		line-height: ${props => (props.smaller ? `28px` : `34px`)};
 	`};
 
 	&:hover {
