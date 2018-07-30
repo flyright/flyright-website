@@ -10,6 +10,10 @@ import Container from '../components/container'
 import Column from '../components/column'
 import Block from '../components/block'
 import EmojiContact from '../components/emojiContact'
+import Form from '../components/form'
+import FormInput from '../components/formInput'
+import FormTextArea from '../components/formTextArea'
+import Button from '../components/button'
 
 class Contact extends React.Component {
 	constructor(props) {
@@ -42,6 +46,24 @@ class Contact extends React.Component {
 						<TextXL center padding="0.5em 0 0.25em 0">
 							{title}
 						</TextXL>
+						<TextM center padding="0.5em 2em" style={{ maxWidth: '300px' }}>
+							Feel free to reach out if you found a bug, have a feature request,
+							or just want to get in touch.
+						</TextM>
+					</Column>
+					<Column role="main">
+						<Form
+							method="POST"
+							action="https://formspree.io/team@flyright.co"
+							autocomplete="off"
+						>
+							<FormInput type="text" name="name" placeholder="Name" />
+							<FormInput type="email" name="email" placeholder="Email" />
+							<FormTextArea name="message" placeholder="Your message" />
+							<Button focus bigger type="submit">
+								Send
+							</Button>
+						</Form>
 					</Column>
 				</Column>
 			</div>
