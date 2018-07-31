@@ -60,7 +60,7 @@ class HeaderDropdown extends React.Component {
 										<TextM
 											smaller
 											headerDesk
-											padding="0.5em 1.25em"
+											padding="0.7em 1.25em"
 											key={item.text}
 										>
 											{item.text}
