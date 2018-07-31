@@ -53,7 +53,7 @@ class BlogPost extends React.Component {
 					</Content>
 					<Content>
 						<TextXL padding="0.8em 0 0 0">{title}</TextXL>
-						<Filter article margin="0.75em 0">
+						<Filter article show margin="0.75em 0">
 							{category.map(item => (
 								<Button
 									left
