@@ -8,6 +8,7 @@ import Row from './row'
 import Column from './column'
 import IconClose from './iconClose'
 import Modal from 'react-modal'
+import ListModalOpen from './listModalOpen'
 import { white, smoke } from '../utils/colors'
 
 class ListModal extends React.Component {
@@ -50,20 +51,9 @@ class ListModal extends React.Component {
 		const { list, prompt } = this.props
 		return (
 			<Contents>
-				<Row
-					onClick={this.toggleModal}
-					center
-					margin="0 0 3em 0"
-					style={{
-						justifyContent: 'center',
-						borderTop: `1px solid ${smoke}`,
-						borderBottom: `1px solid ${smoke}`,
-						backgroundColor: white,
-						cursor: 'pointer',
-					}}
-				>
+				<ListModalOpen onClick={this.toggleModal} margin="0 0 3em 0">
 					<TextM medium>{prompt}</TextM>
-				</Row>
+				</ListModalOpen>
 				<Modal
 					isOpen={this.state.showModal}
 					onRequestClose={this.toggleModal}

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import media from '../utils/media'
 
 const Filter = styled.div`
-	display: flex;
+	display: ${props => (props.show ? `flex` : `none`)};
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: ${props => (props.article ? `flex-start` : `center`)};

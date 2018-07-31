@@ -16,9 +16,13 @@ import LinkExternal from '../components/linkExternal'
 import Card from '../components/card'
 import Button from '../components/button'
 import Filter from '../components/filter'
+import ListModal from '../components/listModal'
 import EmojiBlog from '../components/emojiBlog'
+import IconClose from '../components/iconClose'
+import Modal from 'react-modal'
+import ListModalOpen from '../components/listModalOpen'
 import uniq from 'lodash/uniq'
-import { white } from '../utils/colors'
+import { white, smoke } from '../utils/colors'
 
 class Blog extends React.Component {
 	constructor(props) {
@@ -29,7 +33,9 @@ class Blog extends React.Component {
 			posts: this.props.data.allContentfulBlogPost.edges,
 			currentFilter: this.props.location.state || '',
 			filteredPosts: [],
+			showModal: false,
 		}
+		this.toggleModal = this.toggleModal.bind(this)
 	}
 
 	filterPosts(e) {
@@ -41,6 +47,7 @@ class Blog extends React.Component {
 		this.setState({
 			currentFilter: e.target.innerHTML,
 			filteredPosts: filteredPosts,
+			showModal: false,
 		})
 	}
 
@@ -60,6 +67,8 @@ class Blog extends React.Component {
 		const posts = this.props.data.allContentfulBlogPost.edges
 		const knownCategories = []
 
+		Modal.setAppElement('#___gatsby')
+
 		posts.map(post => {
 			// Map over each post
 			const postCategories = post.node.category // Get all categories
@@ -77,6 +86,12 @@ class Blog extends React.Component {
 		this.setState({ categories: uniq(knownCategories), loaded: true })
 	}
 
+	toggleModal() {
+		this.state.showModal
+			? this.setState({ showModal: false })
+			: this.setState({ showModal: true })
+	}
+
 	render() {
 		const {
 			categories,
@@ -88,6 +103,23 @@ class Blog extends React.Component {
 
 		const page = this.props.data.allContentfulPage.edges
 		const { title, slug, description, keywords } = page[0].node
+
+		const modalStyles = {
+			overlay: {
+				backgroundColor: 'rgba(10, 0, 55, 0.1)',
+				zIndex: 4,
+			},
+			content: {
+				top: 0,
+				right: 0,
+				left: 'none',
+				width: '90vw',
+				height: '100vh',
+				backgroundColor: white,
+				border: 'none',
+				borderRadius: '5px',
+			},
+		}
 
 		return (
 			<Wrapper padding="0 1em 5em 1em">
@@ -108,8 +140,48 @@ class Blog extends React.Component {
 							{title}
 						</TextXL>
 					</Column>
+					<ListModalOpen onClick={this.toggleModal} margin="1.5em 0 0 0">
+						<TextM medium>See all categories</TextM>
+					</ListModalOpen>
+					<Modal
+						isOpen={this.state.showModal}
+						onRequestClose={this.toggleModal}
+						style={modalStyles}
+						contentLabel="Mobile Menu Modal"
+					>
+						<Block onClick={this.toggleModal}>
+							<IconClose />
+						</Block>
+						<Filter show>
+							<Button
+								onClick={() =>
+									this.setState({ currentFilter: '', showModal: false })
+								}
+								style={{
+									backgroundColor: currentFilter !== '' ? white : `ghostwhite`,
+								}}
+							>
+								All
+							</Button>
+							{loaded &&
+								categories.map(category => {
+									return (
+										<Button
+											key={category}
+											onClick={e => this.filterPosts(e)}
+											style={{
+												backgroundColor:
+													category === currentFilter ? `ghostwhite` : white,
+											}}
+										>
+											{category}
+										</Button>
+									)
+								})}
+						</Filter>
+					</Modal>
 					<Block>
-						<Filter>
+						<Filter show={this.state.showModal ? true : false}>
 							<Button
 								onClick={() => this.setState({ currentFilter: '' })}
 								style={{
