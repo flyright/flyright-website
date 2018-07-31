@@ -14,13 +14,17 @@ const navigation = {
 			slug: 'https://itunes.apple.com/us/app/flyright/id1296706648?ls=1&mt=8',
 			isExternal: true,
 		},
-		// { text: 'Web', slug: '/web', isExternal: true },
+		{ text: 'Web', slug: '/web', isExternal: true },
 		{ text: 'API', slug: '/api', isExternal: false },
 	],
 	support: [
 		{ text: 'FAQ', slug: '/faq', isExternal: false },
 		{ text: 'Contact', slug: '/contact', isExternal: false },
-		{ text: 'Twitter', slug: '/b', isExternal: true },
+		{
+			text: 'Twitter',
+			slug: 'https://twitter.com/flyrightco',
+			isExternal: true,
+		},
 	],
 	legal: [
 		{ text: 'Terms of Service', slug: '/terms-of-service', isExternal: false },
