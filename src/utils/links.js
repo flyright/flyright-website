@@ -7,13 +7,13 @@ const links = {
 	roadmap: '/roadmap',
 	presskit: '/press-kit',
 	android: '', // external
-	ios: '', // external
+	ios: 'https://itunes.apple.com/us/app/flyright/id1296706648?ls=1&mt=8', // external
 	web: '', // subdomain web.flyright.co
 	api: '/api',
 	faq: '/faq',
 	contact: '/contact',
-	twitter: '', // external
-	productHunt: '', // external
+	twitter: 'https://twitter.com/flyrightco', // external
+	productHunt: 'https://www.producthunt.com/posts/flyright', // external
 	terms: '/terms-of-service',
 	privacy: '/privacy-policy',
 }

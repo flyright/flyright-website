@@ -17,6 +17,7 @@ import HeaderWrapper from './headerWrapper'
 import Modal from 'react-modal'
 import HeaderMbl from './headerMbl'
 import { white, smoke, acid } from '../utils/colors'
+import { android, ios } from '../utils/links'
 
 class Header extends React.Component {
 	constructor(props) {
@@ -68,14 +69,18 @@ class Header extends React.Component {
 					</Row>
 					<HeaderDesk />
 					<Row center padding="0 0 0.2em 0">
-						<Button>
-							<IconIos />
-							iOS
-						</Button>
-						<Button>
-							<IconAndroid />
-							Android
-						</Button>
+						<LinkExternal href={ios} target="_blank" rel="noopener">
+							<Button>
+								<IconIos />
+								iOS
+							</Button>
+						</LinkExternal>
+						<LinkExternal href={android} target="_blank" rel="noopener">
+							<Button>
+								<IconAndroid />
+								Android
+							</Button>
+						</LinkExternal>
 						<Block onClick={this.toggleModal}>
 							<IconMenu />
 						</Block>
@@ -95,14 +100,18 @@ class Header extends React.Component {
 							padding="0 0 3em 0"
 							style={{ justifyContent: 'center' }}
 						>
-							<Button bigger>
-								<IconIos bigger />
-								iOS
-							</Button>
-							<Button bigger>
-								<IconAndroid bigger />
-								Android
-							</Button>
+							<LinkExternal href={ios} target="_blank" rel="noopener">
+								<Button bigger>
+									<IconIos bigger />
+									iOS
+								</Button>
+							</LinkExternal>
+							<LinkExternal href={ios} target="_blank" rel="noopener">
+								<Button bigger>
+									<IconAndroid bigger />
+									Android
+								</Button>
+							</LinkExternal>
 						</Row>
 					</Modal>
 				</HeaderWrapper>

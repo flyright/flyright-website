@@ -9,7 +9,11 @@ const navigation = {
 	],
 	platform: [
 		{ text: 'Android', slug: '/a', isExternal: true },
-		{ text: 'iOS', slug: '/ios', isExternal: true },
+		{
+			text: 'iOS',
+			slug: 'https://itunes.apple.com/us/app/flyright/id1296706648?ls=1&mt=8',
+			isExternal: true,
+		},
 		// { text: 'Web', slug: '/web', isExternal: true },
 		{ text: 'API', slug: '/api', isExternal: false },
 	],
