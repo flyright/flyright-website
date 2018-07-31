@@ -10,19 +10,26 @@ import Container from '../components/container'
 import Column from '../components/column'
 import Block from '../components/block'
 import EmojiAbout from '../components/emojiAbout'
+import EmojiNoTime from '../components/emojiNoTime'
+import EmojiSomeTime from '../components/emojiSomeTime'
+import EmojiMuchTime from '../components/emojiMuchTime'
+import Content from '../components/content'
+import Button from '../components/button'
+import Row from '../components/row'
+import ReactMarkdown from 'react-markdown'
 
 class About extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			// none yet
+			show: 1, // Number of sections to show
 		}
 	}
 
 	render() {
 		const page = this.props.data.allContentfulPage.edges
 		const { title, slug, description, keywords } = page[0].node // Page info
-		// const content = page[0].node.content.content // Array of page content
+		const content = page[0].node.content.content // Array of text blocks
 
 		return (
 			<div>
@@ -42,7 +49,29 @@ class About extends React.Component {
 						<TextXL center padding="0.5em 0 0.25em 0">
 							{title}
 						</TextXL>
+						<TextM center padding="0.5em 2em" style={{ maxWidth: '300px' }}>
+							Here's a bit more about Flyright. How much time do you have?
+						</TextM>
 					</Column>
+					<Row center>
+						<Button bigger onClick={() => this.setState({ show: 1 })}>
+							<EmojiNoTime />
+						</Button>
+						<Button bigger onClick={() => this.setState({ show: 2 })}>
+							<EmojiSomeTime />
+						</Button>
+						<Button bigger onClick={() => this.setState({ show: 3 })}>
+							<EmojiMuchTime />
+						</Button>
+					</Row>
+					{content &&
+						content.slice(0, this.state.show).map(block => (
+							<Content key={block.id}>
+								<TextM id="markdown" padding="0">
+									<ReactMarkdown source={block.body.body} />
+								</TextM>
+							</Content>
+						))}
 				</Column>
 			</div>
 		)
@@ -63,6 +92,18 @@ export const aboutPageQuery = graphql`
 						description
 					}
 					keywords
+					content {
+						... on ContentfulContainer {
+							content {
+								... on ContentfulBlockText {
+									id
+									body {
+										body
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
