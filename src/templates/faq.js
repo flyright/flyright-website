@@ -14,7 +14,7 @@ import Content from '../components/content'
 import ReactMarkdown from 'react-markdown'
 import EmojiFaq from '../components/emojiFaq'
 import FaqDesk from '../components/faqDesk'
-import ListModal from '../components/listModal'
+import FaqMbl from '../components/faqMbl'
 import '../utils/anchors.css'
 
 class Faq extends React.Component {
@@ -66,7 +66,7 @@ class Faq extends React.Component {
 						</TextXL>
 					</Column>
 				</Column>
-				<ListModal list={this.state.sections} prompt={'See all FAQs'} />
+				<FaqMbl list={this.state.sections} prompt={'See all FAQs'} />
 				<Row
 					style={{
 						justifyContent: 'center',

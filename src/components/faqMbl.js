@@ -11,7 +11,7 @@ import Modal from 'react-modal'
 import ListModalOpen from './listModalOpen'
 import { white, smoke } from '../utils/colors'
 
-class ListModal extends React.Component {
+class FaqMbl extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -90,4 +90,4 @@ const Contents = styled.div`
 		display: none;
 	`};
 `
-export default ListModal
+export default FaqMbl

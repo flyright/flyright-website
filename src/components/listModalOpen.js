@@ -11,9 +11,10 @@ const ListModalOpen = styled.div`
 	border-bottom: 1px solid ${smoke};
 	background-color: ${white};
 	cursor: pointer;
+	margin: ${props => (props.margin ? props.margin : `0 0 3em 0`)};
 	position: sticky;
 	top: 74px;
-	margin: ${props => (props.margin ? props.margin : `0 0 3em 0`)};
+	z-index: 1;
 
 	${media.desk`
 		display: none;

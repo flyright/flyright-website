@@ -8,6 +8,10 @@ const Filter = styled.div`
 	justify-content: ${props => (props.article ? `flex-start` : `center`)};
 	padding: ${props => (props.padding ? props.padding : `auto`)};
 	margin: ${props => (props.margin ? props.margin : `auto`)};
+
+	${media.desk`
+		display: flex;
+	`};
 `
 
 export default Filter

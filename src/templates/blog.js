@@ -16,7 +16,6 @@ import LinkExternal from '../components/linkExternal'
 import Card from '../components/card'
 import Button from '../components/button'
 import Filter from '../components/filter'
-import ListModal from '../components/listModal'
 import EmojiBlog from '../components/emojiBlog'
 import IconClose from '../components/iconClose'
 import Modal from 'react-modal'
@@ -133,15 +132,17 @@ class Blog extends React.Component {
 					<meta property="og:description" content={description.description} />
 					<meta property="og:url" content={`https://flyright.co/${slug}`} />
 				</Helmet>
-				<Column padding="1em 0 2em 0">
+				<Column padding="1em 0 0 0">
 					<Column padding="2em 0 0 0">
 						<EmojiBlog />
 						<TextXL center padding="0.5em 0 0.25em 0">
 							{title}
 						</TextXL>
 					</Column>
-					<ListModalOpen onClick={this.toggleModal} margin="1.5em 0 0 0">
-						<TextM medium>See all categories</TextM>
+				</Column>
+				<Column>
+					<ListModalOpen onClick={this.toggleModal} margin="2em 0">
+						<TextM medium>Filter by category</TextM>
 					</ListModalOpen>
 					<Modal
 						isOpen={this.state.showModal}
@@ -152,11 +153,12 @@ class Blog extends React.Component {
 						<Block onClick={this.toggleModal}>
 							<IconClose />
 						</Block>
-						<Filter show>
+						<Filter show margin="1em 0">
 							<Button
 								onClick={() =>
 									this.setState({ currentFilter: '', showModal: false })
 								}
+								bigger
 								style={{
 									backgroundColor: currentFilter !== '' ? white : `ghostwhite`,
 								}}
@@ -167,6 +169,7 @@ class Blog extends React.Component {
 								categories.map(category => {
 									return (
 										<Button
+											bigger
 											key={category}
 											onClick={e => this.filterPosts(e)}
 											style={{
@@ -207,12 +210,14 @@ class Blog extends React.Component {
 								})}
 						</Filter>
 					</Block>
+					<Container role="main">
+						{currentFilter !== ''
+							? filteredPosts.map(post => (
+									<Card post={post} key={post.node.id} />
+							  ))
+							: posts.map(post => <Card post={post} key={post.node.id} />)}
+					</Container>
 				</Column>
-				<Container role="main">
-					{currentFilter !== ''
-						? filteredPosts.map(post => <Card post={post} key={post.node.id} />)
-						: posts.map(post => <Card post={post} key={post.node.id} />)}
-				</Container>
 			</Wrapper>
 		)
 	}
