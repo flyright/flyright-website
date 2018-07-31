@@ -14,12 +14,10 @@ const FormTextArea = styled.textarea`
 	width: 250px;
 	border: 1px solid ${acid};
 	border-radius: 3px;
+	appearance: none;
 
 	${media.mbl`
-		width: 350px;
-	`};
-	${media.desk`
-		width: 300px;
+		width: 320px;
 	`};
 
 	&::placeholder {

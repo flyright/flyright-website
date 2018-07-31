@@ -58,7 +58,7 @@ class Faq extends React.Component {
 					<meta property="og:description" content={description.description} />
 					<meta property="og:url" content={`https://flyright.co/${slug}`} />
 				</Helmet>
-				<Column padding="1em 0 1em 0">
+				<Column padding="1em 0">
 					<Column padding="2em 0 0 0">
 						<EmojiFaq />
 						<TextXL center padding="0.5em 0 0.25em 0">

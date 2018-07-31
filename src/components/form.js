@@ -7,7 +7,11 @@ const Form = styled.form`
 	align-items: center;
 	padding: 0 1em;
 	margin: 2em auto;
-	max-width: 700px;
+	max-width: 300px;
+
+	${media.tab`
+		max-width: 700px;
+	`};
 `
 
 export default Form
