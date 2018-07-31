@@ -4,8 +4,8 @@
 .anchorOffset::before {
 	display: block;
 	content: ' ';
-	margin-top: -112px;
-	height: 112px;
+	margin-top: -140px;
+	height: 140px;
 	visibility: hidden;
 	pointer-events: none;
 }
