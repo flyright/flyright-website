@@ -141,7 +141,7 @@ class Blog extends React.Component {
 					</Column>
 				</Column>
 				<Column>
-					<ListModalOpen onClick={this.toggleModal} margin="2em 0">
+					<ListModalOpen onClick={this.toggleModal} margin="1em 0 2em 0">
 						<TextM medium>Filter by category</TextM>
 					</ListModalOpen>
 					<Modal

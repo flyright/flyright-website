@@ -51,7 +51,7 @@ class FaqMbl extends React.Component {
 		const { list, prompt } = this.props
 		return (
 			<Contents>
-				<ListModalOpen onClick={this.toggleModal} margin="0 0 3em 0">
+				<ListModalOpen onClick={this.toggleModal} margin="0 0 2em 0">
 					<TextM medium>{prompt}</TextM>
 				</ListModalOpen>
 				<Modal
