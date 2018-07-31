@@ -10,7 +10,7 @@ import IconClose from './iconClose'
 import Modal from 'react-modal'
 import { white, smoke } from '../utils/colors'
 
-class FaqMbl extends React.Component {
+class ListModal extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -47,7 +47,7 @@ class FaqMbl extends React.Component {
 			},
 		}
 
-		const { sections } = this.props
+		const { list, prompt } = this.props
 		return (
 			<Contents>
 				<Row
@@ -62,26 +62,26 @@ class FaqMbl extends React.Component {
 						cursor: 'pointer',
 					}}
 				>
-					<TextM medium>See all FAQs</TextM>
+					<TextM medium>{prompt}</TextM>
 				</Row>
 				<Modal
 					isOpen={this.state.showModal}
 					onRequestClose={this.toggleModal}
 					style={modalStyles}
-					contentLabel="FAQ Anchor Mobile Menu"
+					contentLabel="Mobile Menu Modal"
 				>
 					<Block onClick={this.toggleModal}>
 						<IconClose />
 					</Block>
 					<Column center margin="2em 0">
-						{sections.map(section => (
+						{list.map(item => (
 							<Anchor
-								key={section.id}
-								href={`#${section.id}`}
+								key={item.id}
+								href={`#${item.id}`}
 								onClick={this.toggleModal}
 							>
 								<TextM smaller medium padding="0 0 1.5em 0">
-									{section.innerText}
+									{item.innerText}
 								</TextM>
 							</Anchor>
 						))}
@@ -100,4 +100,4 @@ const Contents = styled.div`
 		display: none;
 	`};
 `
-export default FaqMbl
+export default ListModal
