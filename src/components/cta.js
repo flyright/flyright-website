@@ -13,6 +13,7 @@ import IconIos from './iconIos'
 import IconAndroid from './iconAndroid'
 import ReactMarkdown from 'react-markdown'
 import { dark, white } from '../utils/colors'
+import { android, ios } from '../utils/links'
 
 const Cta = props => {
 	const items = props.cta.content
@@ -38,14 +39,18 @@ const Cta = props => {
 							<Block>
 								{item.hasDownloadButtons && (
 									<Row center style={{ justifyContent: 'center' }}>
-										<Button purple bigger>
-											<IconIos white bigger />
-											iOS
-										</Button>
-										<Button purple bigger>
-											<IconAndroid white bigger />
-											Android
-										</Button>
+										<LinkExternal href={ios} target="_blank" rel="noopener">
+											<Button purple bigger>
+												<IconIos white bigger />
+												iOS
+											</Button>
+										</LinkExternal>
+										<LinkExternal href={android} target="_blank" rel="noopener">
+											<Button purple bigger>
+												<IconAndroid white bigger />
+												Android
+											</Button>
+										</LinkExternal>
 									</Row>
 								)}
 								{item.buttonText && (
