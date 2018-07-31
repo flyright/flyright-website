@@ -3,8 +3,7 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-html,
-body {
+html {
 	position: relative;
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -12,11 +11,11 @@ body {
 }
 
 body {
+	position: relative;
 	font-family: 'Barlow', sans-serif;
 	font-weight: 400;
 	color: #020836;
 	margin: 0;
-	overflow-x: hidden;
 }
 
 h1,

@@ -24,8 +24,7 @@ class Legal extends React.Component {
 	render() {
 		const page = this.props.data.allContentfulPage.edges
 		const { title, slug, description, keywords } = page[0].node // Page info
-		const content = page[0].node.content.content[0].body.body
-		// const content = page[0].node.content.content // Array of page content
+		const content = page[0].node.content.content[0].body.body // Array of content
 
 		return (
 			<div>

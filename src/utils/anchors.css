@@ -1,0 +1,23 @@
+/* Anchor offset only possible in external stylesheet */
+
+/* Fix header hiding on mbl & tab */
+.anchorOffset::before {
+	display: block;
+	content: ' ';
+	margin-top: -112px;
+	height: 112px;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+/* Adjust header hiding on desk */
+@media (min-width: 990px) {
+	.anchorOffset::before {
+		display: block;
+		content: ' ';
+		margin-top: -82px;
+		height: 82px;
+		visibility: hidden;
+		pointer-events: none;
+	}
+}
