@@ -4,7 +4,12 @@ import media from '../utils/media'
 import { purple } from '../utils/colors'
 
 const EmojiPressKit = () => (
-	<Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 60">
+	<Svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 56 60"
+		aria-labelledby="emojiPressKit"
+	>
+		<title id="emojiPressKit">Newspaper emoji</title>
 		<g fill="none">
 			<path fill="#CFD8DD" d="M0,8 L0,56 C0,56 0,60 4,60 L8,60 L8,8 L0,8 Z" />
 			<path fill="#BEC3CF" d="M2,6 L2,56 C2,56 2,60 6,60 L6,6 L2,6 Z" />

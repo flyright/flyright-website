@@ -8,7 +8,7 @@ const EmojiSomeTime = () => (
 		viewBox="0 0 60 54"
 		aria-labelledby="emojiNoTime"
 	>
-		<title id="emojiNoTime">Woman gesturing do not know emoji</title>
+		<title id="emojiNoTime">Person gesturing do not know emoji</title>
 		<g fill="none">
 			<path
 				fill="#EA8800"

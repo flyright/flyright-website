@@ -8,7 +8,7 @@ const EmojiRoadmap = () => (
 		viewBox="0 0 60 60"
 		aria-labelledby="emojiRoadmap"
 	>
-		<title id="emojiRoadmap">Woman climbing emoji</title>
+		<title id="emojiRoadmap">Person climbing emoji</title>
 		<g fill="none">
 			<polygon
 				fill="#D6A57C"
