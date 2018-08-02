@@ -68,7 +68,7 @@ class Api extends React.Component {
 					</TextM>
 					<Form
 						method="POST"
-						action="https://formspree.io/data@flyright.co"
+						action="https://formspree.io/team@flyright.co"
 						autocomplete="off"
 					>
 						<FormInput type="text" name="name" placeholder="Name" />
