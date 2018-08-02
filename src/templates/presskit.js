@@ -10,6 +10,7 @@ import Container from '../components/container'
 import Column from '../components/column'
 import Block from '../components/block'
 import EmojiPressKit from '../components/emojiPressKit'
+import Downloadable from '../components/downloadable'
 
 class PressKit extends React.Component {
 	constructor(props) {
@@ -22,7 +23,7 @@ class PressKit extends React.Component {
 	render() {
 		const page = this.props.data.allContentfulPage.edges
 		const { title, slug, description, keywords } = page[0].node // Page info
-		// const content = page[0].node.content.content // Array of page content
+		const content = page[0].node.content.content // Array of page content
 
 		return (
 			<div>
@@ -44,6 +45,9 @@ class PressKit extends React.Component {
 						</TextXL>
 					</Column>
 				</Column>
+				<Container style={{ margin: '0 auto 4em auto', maxWidth: '650px' }}>
+					{content.map(item => <Downloadable {...item} key={item.id} />)}
+				</Container>
 			</div>
 		)
 	}
@@ -63,6 +67,19 @@ export const pressKitPageQuery = graphql`
 						description
 					}
 					keywords
+					content {
+						content {
+							... on ContentfulDownloadable {
+								id
+								title
+								zip {
+									file {
+										url
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
