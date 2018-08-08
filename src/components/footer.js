@@ -82,11 +82,13 @@ const Footer = props => {
 									iOS
 								</TextM>
 							</LinkExternal>
+							{/*
 							<LinkExternal footer href={web} target="_blank" rel="noopener">
 								<TextM smaller color={white} padding="0.25em 0">
 									Web
 								</TextM>
 							</LinkExternal>
+							*/}
 							<LinkInternal footer to={api}>
 								<TextM smaller color={white} padding="0.25em 0">
 									API
