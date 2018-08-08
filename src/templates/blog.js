@@ -123,7 +123,7 @@ class Blog extends React.Component {
 		return (
 			<Wrapper padding="0 1em 5em 1em">
 				<Helmet>
-					<title>{title}</title>
+					<title>{`${title} | Flyright`}</title>
 					<meta name="title" content={title} />
 					<meta name="description" content={description.description} />
 					<meta name="keywords" content={keywords.join(', ')} />

@@ -28,7 +28,7 @@ class Roadmap extends React.Component {
 		return (
 			<div>
 				<Helmet>
-					<title>{title}</title>
+					<title>{`${title} | Flyright`}</title>
 					<meta name="title" content={title} />
 					<meta name="description" content={description.description} />
 					<meta name="keywords" content={keywords.join(', ')} />

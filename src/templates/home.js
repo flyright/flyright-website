@@ -39,7 +39,7 @@ class Home extends React.Component {
 					<meta name="description" content={description.description} />
 					<meta name="keywords" content={keywords.join(', ')} />
 					<meta property="og:type" content="website" />
-					<meta property="og:title" content={title} />
+					<meta property="og:title" content="Flyright" />
 					<meta property="og:description" content={description.description} />
 					<meta property="og:url" content="https://flyright.co" />
 				</Helmet>
