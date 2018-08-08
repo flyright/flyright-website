@@ -32,7 +32,7 @@ class Layout extends React.Component {
 						sizes="180x180"
 						href={faviconApplePrecomposed}
 					/>
-					<link rel="apple-touch-icon" sizes="180x180" href={faviconApple} />
+					<link rel="apple-touch-icon" href={faviconApple} />
 					<link rel="icon" type="image/png" sizes="48x48" href={favicon48} />
 					<link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
 					<link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
