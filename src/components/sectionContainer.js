@@ -21,6 +21,7 @@ const SectionContainer = styled.div`
 		}};
 		justify-content: center;
 		padding: 1em;
+		margin: ${props => (props.landing ? `3em 1em 0 3em` : `0 auto`)};
 	`};
 
 	${media.desk`

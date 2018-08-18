@@ -7,7 +7,7 @@ const NotificationBar = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 40px;
+	height: 50px;
 	margin: 0 0 1em 0;
 	background-color: ${purple};
 	cursor: pointer;
@@ -20,6 +20,10 @@ const NotificationBar = styled.div`
 
 	${media.tab`
 		margin: 0;
+	`};
+
+	${media.desk`
+		height: 40px;
 	`};
 `
 
