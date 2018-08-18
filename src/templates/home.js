@@ -23,7 +23,7 @@ class Home extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			notification: {},
+			notification: null,
 		}
 	}
 
@@ -42,6 +42,7 @@ class Home extends React.Component {
 		const { title, slug, description, keywords } = page[0].node // Page info
 		const content = page[0].node.content.content // Array of page content
 		const notification = this.state.notification
+		console.log(notification)
 
 		return (
 			<div>
@@ -56,11 +57,12 @@ class Home extends React.Component {
 					<meta property="og:url" content="https://flyright.co" />
 				</Helmet>
 				<Block>
-					{notification.content.map(item => (
-						<Notification {...item} key={item.id} />
-					))}
+					{notification &&
+						notification.content.map(item => (
+							<Notification {...item} key={item.id} />
+						))}
 				</Block>
-				<Block padding="1em 0">
+				<Block padding={notification ? `1em 0` : `2em 0`}>
 					{content[0].content.map(item => <Section {...item} key={item.id} />)}
 				</Block>
 				<Block padding="5em 0 2.5em 0">
