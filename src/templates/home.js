@@ -106,7 +106,7 @@ export const homePageQuery = graphql`
 										}
 										image {
 											title
-											sizes(quality: 100) {
+											sizes(quality: 75) {
 												...GatsbyContentfulSizes_withWebp
 											}
 										}
