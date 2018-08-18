@@ -23,7 +23,7 @@ const NotificationBar = styled.div`
 	`};
 
 	${media.desk`
-		height: 40px;
+		height: 45px;
 	`};
 `
 
