@@ -43,31 +43,26 @@ class Home extends React.Component {
 					<meta property="og:description" content={description.description} />
 					<meta property="og:url" content="https://flyright.co" />
 				</Helmet>
-				<Column padding="4em 0 12em 0">
-					<TextXXL center padding="0 1em">
-						Travel simply together
-					</TextXXL>
-					<TextM center padding="2em" style={{ maxWidth: '310px' }}>
-						Flyright helps you do travel preparation in seconds, not hours.
-					</TextM>
-				</Column>
-				<Block padding="5em 0 2.5em 0">
-					<TextXL center padding="0 1em" key={content[0].title}>
-						{content[0].title}
-					</TextXL>
+				<Block padding="2em 0 1em 0">
 					{content[0].content.map(item => <Section {...item} key={item.id} />)}
 				</Block>
+				<Block padding="5em 0 2.5em 0">
+					<TextXL center padding="0 1em" key={content[0].title}>
+						{content[1].title}
+					</TextXL>
+					{content[1].content.map(item => <Section {...item} key={item.id} />)}
+				</Block>
 				<Block>
-					<Cta cta={content[1]} />
+					<Cta cta={content[2]} />
 				</Block>
 				<Block padding="5em 0 2.5em 0">
-					<TextXL center padding="0 1em" key={content[2].title}>
-						{content[2].title}
+					<TextXL center padding="0 1em" key={content[3].title}>
+						{content[3].title}
 					</TextXL>
-					{content[2].content.map(item => <Section {...item} key={item.id} />)}
+					{content[3].content.map(item => <Section {...item} key={item.id} />)}
 				</Block>
 				<Block>
-					<Cta cta={content[3]} />
+					<Cta cta={content[4]} />
 				</Block>
 				<Column padding="5em 0 4em 0">
 					<TextXL center padding="0 1em">
@@ -111,11 +106,12 @@ export const homePageQuery = graphql`
 										}
 										image {
 											title
-											sizes {
+											sizes(quality: 100) {
 												...GatsbyContentfulSizes_withWebp
 											}
 										}
 										layout
+										isLanding
 									}
 									... on ContentfulCta {
 										id

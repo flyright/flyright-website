@@ -35,6 +35,8 @@ const SectionBlock = styled.div`
 	`};
 	${media.desk`
 		max-width: ${props => (props.text ? `375px` : `none`)};
+		max-width: ${props => props.landing && `320px`};
+		margin: ${props => props.landing && `0 0 0 4.5em`};
 	`};
 `
 

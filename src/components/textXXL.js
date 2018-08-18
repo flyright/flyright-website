@@ -15,7 +15,7 @@ const TextXXL = styled.div`
 
 	${media.tab`
 		font-size: 50px;
-		line-height: 68px;
+		line-height: 64px;
 	`};
 `
 

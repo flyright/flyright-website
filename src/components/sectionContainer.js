@@ -3,7 +3,7 @@ import media from '../utils/media'
 
 const SectionContainer = styled.div`
 	display: flex;
-	flex-direction: column;
+	flex-direction: ${props => (props.landing ? `column-reverse` : `column`)};
 	align-items: center;
 
 	${media.tab`
@@ -24,7 +24,7 @@ const SectionContainer = styled.div`
 	`};
 
 	${media.desk`
-		max-width: 1000px;
+		max-width: ${props => (props.landing ? `1200px` : `1000px`)};
 		margin: 0 auto;
 	`};
 `
