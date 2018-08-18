@@ -16,13 +16,24 @@ import LinkExternal from '../components/linkExternal'
 import Section from '../components/section'
 import Cta from '../components/cta'
 import Social from '../components/social'
+import Notification from '../components/notification'
 import { light } from '../utils/colors'
 
 class Home extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			// none yet
+			notification: {},
+		}
+	}
+
+	componentWillMount() {
+		const content = this.props.data.allContentfulPage.edges[0].node.content
+			.content
+
+		// If notification container exists, remove from content array and set to state
+		if (content[0].title === 'Notification') {
+			this.setState({ notification: content.shift() })
 		}
 	}
 
@@ -30,6 +41,7 @@ class Home extends React.Component {
 		const page = this.props.data.allContentfulPage.edges
 		const { title, slug, description, keywords } = page[0].node // Page info
 		const content = page[0].node.content.content // Array of page content
+		const notification = this.state.notification
 
 		return (
 			<div>
@@ -43,7 +55,12 @@ class Home extends React.Component {
 					<meta property="og:description" content={description.description} />
 					<meta property="og:url" content="https://flyright.co" />
 				</Helmet>
-				<Block padding="2em 0 1em 0">
+				<Block>
+					{notification.content.map(item => (
+						<Notification {...item} key={item.id} />
+					))}
+				</Block>
+				<Block padding="1em 0">
 					{content[0].content.map(item => <Section {...item} key={item.id} />)}
 				</Block>
 				<Block padding="5em 0 2.5em 0">
@@ -98,6 +115,12 @@ export const homePageQuery = graphql`
 								id
 								title
 								content {
+									... on ContentfulNotification {
+										id
+										text
+										slug
+										isExternal
+									}
 									... on ContentfulSection {
 										id
 										title

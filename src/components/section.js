@@ -28,7 +28,7 @@ class Section extends React.Component {
 					landing={item.isLanding ? true : false}
 				>
 					{item.isLanding ? (
-						<TextXXL padding="0 0 1em 0">{item.title}</TextXXL>
+						<TextXXL padding="0 0 0.5em 0">{item.title}</TextXXL>
 					) : (
 						<TextL padding="0.75em 0">{item.title}</TextL>
 					)}

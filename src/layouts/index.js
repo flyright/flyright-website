@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import './index.css'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
+import Children from '../components/children'
 import Footer from '../components/footer'
 import favicon from '../assets/favicon/favicon.ico'
 import faviconApplePrecomposed from '../assets/favicon/apple-touch-icon-precomposed.png'
@@ -55,7 +56,7 @@ class Layout extends React.Component {
 					</noscript>
 				</Helmet>
 				<Header />
-				<div style={{ padding: '5rem 0 0 0' }}>{children()}</div>
+				<Children>{children()}</Children>
 				<Footer />
 			</div>
 		)
