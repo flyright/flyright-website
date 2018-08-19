@@ -42,7 +42,6 @@ class Home extends React.Component {
 		const { title, slug, description, keywords } = page[0].node // Page info
 		const content = page[0].node.content.content // Array of page content
 		const notification = this.state.notification
-		console.log(notification)
 
 		return (
 			<div>
