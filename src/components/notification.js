@@ -16,7 +16,7 @@ const Notification = props => {
 			{item.isExternal ? (
 				<LinkExternal href={item.slug} target="_blank" rel="noopener">
 					<NotificationBar>
-						<TextS color={white} padding="0 0 2px 0">
+						<TextS medium color={white} padding="0 0 2px 0">
 							{item.text}
 						</TextS>
 					</NotificationBar>
@@ -24,7 +24,7 @@ const Notification = props => {
 			) : (
 				<LinkInternal to={item.slug}>
 					<NotificationBar>
-						<TextS color={white} padding="0 0 2px 0">
+						<TextS medium color={white} padding="0 0 2px 0">
 							{item.text}
 						</TextS>
 					</NotificationBar>
