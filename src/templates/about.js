@@ -17,6 +17,7 @@ import Content from '../components/content'
 import Button from '../components/button'
 import Row from '../components/row'
 import ReactMarkdown from 'react-markdown'
+import { mist, white } from '../utils/colors'
 
 class About extends React.Component {
 	constructor(props) {
@@ -54,13 +55,25 @@ class About extends React.Component {
 						</TextM>
 					</Column>
 					<Row center>
-						<Button bigger onClick={() => this.setState({ show: 1 })}>
+						<Button
+							bigger
+							onClick={() => this.setState({ show: 1 })}
+							style={{ backgroundColor: this.state.show === 1 ? mist : white }}
+						>
 							<EmojiNoTime />
 						</Button>
-						<Button bigger onClick={() => this.setState({ show: 2 })}>
+						<Button
+							bigger
+							onClick={() => this.setState({ show: 2 })}
+							style={{ backgroundColor: this.state.show === 2 ? mist : white }}
+						>
 							<EmojiSomeTime />
 						</Button>
-						<Button bigger onClick={() => this.setState({ show: 3 })}>
+						<Button
+							bigger
+							onClick={() => this.setState({ show: 3 })}
+							style={{ backgroundColor: this.state.show === 3 ? mist : white }}
+						>
 							<EmojiMuchTime />
 						</Button>
 					</Row>
