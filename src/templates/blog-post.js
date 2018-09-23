@@ -14,11 +14,19 @@ import Button from '../components/button'
 import Column from '../components/column'
 import Row from '../components/row'
 import Filter from '../components/filter'
+import Tile from '../components/tile'
+import copy from 'copy-to-clipboard'
 import { light } from '../utils/colors'
 import '../utils/markdown.css'
 import { navigateTo } from 'gatsby-link'
 
 class BlogPost extends React.Component {
+	copyToClipboard() {
+		const url = `https://flyright.co${this.props.location.pathname}`
+		copy(url)
+		alert('Copied link to clipboard ✅')
+	}
+
 	render() {
 		const page = this.props.data.allContentfulBlogPost.edges // returns array of Blog Post children
 		const {
@@ -91,6 +99,22 @@ class BlogPost extends React.Component {
 								)}
 							</div>
 						))}
+					<Column>
+						<Tile>
+							<TextM center>
+								Thanks for checking out Flyright! Feel free to pass this to a
+								friend if you like it 💜
+							</TextM>
+							<Row>
+								<Button onClick={::this.copyToClipboard}>Copy URL</Button>
+								<Button>
+									<LinkInternal borderless to="/blog">
+										More posts
+									</LinkInternal>
+								</Button>
+							</Row>
+						</Tile>
+					</Column>
 				</Wrapper>
 			</div>
 		)
