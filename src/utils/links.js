@@ -6,7 +6,7 @@ const links = {
 	blog: '/blog',
 	roadmap: '/roadmap',
 	presskit: '/press-kit',
-	android: '', // external
+	android: 'https://play.google.com/store/apps/details?id=co.flyright.flyright', // external
 	ios: 'https://itunes.apple.com/us/app/flyright/id1296706648?ls=1&mt=8', // external
 	web: '', // subdomain web.flyright.co
 	api: '/api',

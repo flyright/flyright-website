@@ -8,7 +8,12 @@ const navigation = {
 		{ text: 'Press Kit', slug: '/press-kit', isExternal: false },
 	],
 	platform: [
-		{ text: 'Android', slug: '/a', isExternal: true },
+		{
+			text: 'Android',
+			slug:
+				'https://play.google.com/store/apps/details?id=co.flyright.flyright',
+			isExternal: true,
+		},
 		{
 			text: 'iOS',
 			slug: 'https://itunes.apple.com/us/app/flyright/id1296706648?ls=1&mt=8',

@@ -106,7 +106,7 @@ class Header extends React.Component {
 									iOS
 								</Button>
 							</LinkExternal>
-							<LinkExternal href={ios} target="_blank" rel="noopener">
+							<LinkExternal href={android} target="_blank" rel="noopener">
 								<Button bigger>
 									<IconAndroid bigger />
 									Android
