@@ -13,7 +13,7 @@ const links = {
 	faq: '/faq',
 	contact: '/contact',
 	twitter: 'https://twitter.com/flyrightco', // external
-	productHunt: 'https://www.producthunt.com/posts/flyright', // external
+	productHunt: 'https://www.producthunt.com/posts/flyright-2-0', // external
 	terms: '/terms-of-service',
 	privacy: '/privacy-policy',
 }
