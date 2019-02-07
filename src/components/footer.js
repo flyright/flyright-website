@@ -16,159 +16,161 @@ import IconTwitter from './iconTwitter'
 import IconProductHunt from './iconProductHunt'
 import FooterWrapper from './footerWrapper'
 import {
-	about,
-	blog,
-	roadmap,
-	presskit,
-	android,
-	ios,
-	web,
-	api,
-	contact,
-	faq,
-	twitter,
-	productHunt,
-	terms,
-	privacy,
+  about,
+  blog,
+  roadmap,
+  presskit,
+  android,
+  ios,
+  web,
+  api,
+  contact,
+  faq,
+  twitter,
+  productHunt,
+  terms,
+  privacy,
 } from '../utils/links'
 
 const Footer = props => {
-	return (
-		<Bar>
-			<FooterWrapper>
-				<Container footer>
-					<Row>
-						<Column left footer margin="1em 1.5em">
-							<TextL smaller color={white} padding="0 0 0.5em 0">
-								Company
-							</TextL>
-							<LinkInternal footer to={about}>
-								<TextM smaller color={white} padding="0.25em 0">
-									About
-								</TextM>
-							</LinkInternal>
-							<LinkInternal footer to={blog}>
-								<TextM smaller color={white} padding="0.25em 0">
-									Blog
-								</TextM>
-							</LinkInternal>
-							<LinkInternal footer to={roadmap}>
-								<TextM smaller color={white} padding="0.25em 0">
-									Roadmap
-								</TextM>
-							</LinkInternal>
-							<LinkInternal footer to={presskit}>
-								<TextM smaller color={white} padding="0.25em 0">
-									Press Kit
-								</TextM>
-							</LinkInternal>
-						</Column>
-						<Column left footer margin="1em 1.5em">
-							<TextL smaller color={white} padding="0 0 0.5em 0">
-								Platform
-							</TextL>
-							<LinkExternal
-								footer
-								href={android}
-								target="_blank"
-								rel="noopener"
-							>
-								<TextM smaller color={white} padding="0.25em 0">
-									Android
-								</TextM>
-							</LinkExternal>
-							<LinkExternal footer href={ios} target="_blank" rel="noopener">
-								<TextM smaller color={white} padding="0.25em 0">
-									iOS
-								</TextM>
-							</LinkExternal>
-							{/*
+  return (
+    <Bar>
+      <FooterWrapper>
+        <Container footer>
+          <Row>
+            <Column left footer margin="1em 1.5em">
+              <TextL smaller color={white} padding="0 0 0.5em 0">
+                Company
+              </TextL>
+              <LinkInternal footer to={about}>
+                <TextM smaller color={white} padding="0.25em 0">
+                  About
+                </TextM>
+              </LinkInternal>
+              <LinkInternal footer to={blog}>
+                <TextM smaller color={white} padding="0.25em 0">
+                  Blog
+                </TextM>
+              </LinkInternal>
+              <LinkInternal footer to={roadmap}>
+                <TextM smaller color={white} padding="0.25em 0">
+                  Roadmap
+                </TextM>
+              </LinkInternal>
+              <LinkInternal footer to={presskit}>
+                <TextM smaller color={white} padding="0.25em 0">
+                  Press Kit
+                </TextM>
+              </LinkInternal>
+            </Column>
+            <Column left footer margin="1em 1.5em">
+              <TextL smaller color={white} padding="0 0 0.5em 0">
+                Platform
+              </TextL>
+              <LinkExternal
+                footer
+                href={android}
+                target="_blank"
+                rel="noopener"
+              >
+                <TextM smaller color={white} padding="0.25em 0">
+                  Android
+                </TextM>
+              </LinkExternal>
+              <LinkExternal footer href={ios} target="_blank" rel="noopener">
+                <TextM smaller color={white} padding="0.25em 0">
+                  iOS
+                </TextM>
+              </LinkExternal>
+              {/*
 							<LinkExternal footer href={web} target="_blank" rel="noopener">
 								<TextM smaller color={white} padding="0.25em 0">
 									Web
 								</TextM>
 							</LinkExternal>
 							*/}
-							<LinkInternal footer to={api}>
-								<TextM smaller color={white} padding="0.25em 0">
-									API
-								</TextM>
-							</LinkInternal>
-						</Column>
-					</Row>
-					<Row>
-						<Column left footer margin="1em 1.5em">
-							<TextL smaller color={white} padding="0 0 0.5em 0">
-								Support
-							</TextL>
-							<LinkInternal footer to={faq}>
-								<TextM smaller color={white} padding="0.25em 0">
-									FAQ
-								</TextM>
-							</LinkInternal>
-							<LinkInternal footer to={contact}>
-								<TextM smaller color={white} padding="0.25em 0">
-									Contact
-								</TextM>
-							</LinkInternal>
-							<LinkExternal
-								footer
-								href={twitter}
-								target="_blank"
-								rel="noopener"
-							>
-								<TextM smaller color={white} padding="0.25em 0">
-									Twitter
-								</TextM>
-							</LinkExternal>
-						</Column>
-						<Column left footer margin="1em 1.5em">
-							<TextL smaller color={white} padding="0 0 0.5em 0">
-								Legal
-							</TextL>
-							<LinkInternal footer to={terms}>
-								<TextM
-									smaller
-									color={white}
-									padding="0.25em 0"
-									style={{ lineHeight: '26px' }}
-								>
-									Terms of Service
-								</TextM>
-							</LinkInternal>
-							<LinkInternal footer to={privacy}>
-								<TextM smaller color={white} padding="0.25em 0">
-									Privacy Policy
-								</TextM>
-							</LinkInternal>
-						</Column>
-					</Row>
-				</Container>
-				<Container style={{ padding: '1em' }}>
-					<Row center margin="0 0.75em">
-						<LinkExternal footer href={twitter} target="_blank" rel="noopener">
-							<IconTwitter />
-						</LinkExternal>
-						<LinkExternal
-							footer
-							href={productHunt}
-							target="_blank"
-							rel="noopener"
-						>
-							<IconProductHunt />
-						</LinkExternal>
-					</Row>
-					<Row center margin="0 0.75em">
-						<TextS color={white}>2018 &copy; Flyright, Inc.</TextS>
-					</Row>
-				</Container>
-			</FooterWrapper>
-		</Bar>
-	)
+              <LinkInternal footer to={api}>
+                <TextM smaller color={white} padding="0.25em 0">
+                  API
+                </TextM>
+              </LinkInternal>
+            </Column>
+          </Row>
+          <Row>
+            <Column left footer margin="1em 1.5em">
+              <TextL smaller color={white} padding="0 0 0.5em 0">
+                Support
+              </TextL>
+              <LinkInternal footer to={faq}>
+                <TextM smaller color={white} padding="0.25em 0">
+                  FAQ
+                </TextM>
+              </LinkInternal>
+              <LinkInternal footer to={contact}>
+                <TextM smaller color={white} padding="0.25em 0">
+                  Contact
+                </TextM>
+              </LinkInternal>
+              <LinkExternal
+                footer
+                href={twitter}
+                target="_blank"
+                rel="noopener"
+              >
+                <TextM smaller color={white} padding="0.25em 0">
+                  Twitter
+                </TextM>
+              </LinkExternal>
+            </Column>
+            <Column left footer margin="1em 1.5em">
+              <TextL smaller color={white} padding="0 0 0.5em 0">
+                Legal
+              </TextL>
+              <LinkInternal footer to={terms}>
+                <TextM
+                  smaller
+                  color={white}
+                  padding="0.25em 0"
+                  style={{ lineHeight: '26px' }}
+                >
+                  Terms of Service
+                </TextM>
+              </LinkInternal>
+              <LinkInternal footer to={privacy}>
+                <TextM smaller color={white} padding="0.25em 0">
+                  Privacy Policy
+                </TextM>
+              </LinkInternal>
+            </Column>
+          </Row>
+        </Container>
+        <Container style={{ padding: '1em' }}>
+          <Row center margin="0 0.75em">
+            <LinkExternal footer href={twitter} target="_blank" rel="noopener">
+              <IconTwitter />
+            </LinkExternal>
+            <LinkExternal
+              footer
+              href={productHunt}
+              target="_blank"
+              rel="noopener"
+            >
+              <IconProductHunt />
+            </LinkExternal>
+          </Row>
+          <Row center margin="0 0.75em">
+            <TextS color={white}>
+              {new Date().getFullYear()} &copy; Flyright, Inc.
+            </TextS>
+          </Row>
+        </Container>
+      </FooterWrapper>
+    </Bar>
+  )
 }
 
 const Bar = styled.div`
-	background-color: ${dark};
+  background-color: ${dark};
 `
 
 export default Footer
