@@ -4,6 +4,9 @@
 
 Flyright's website is built with [Gatsby, a static site generator for React](https://www.gatsbyjs.org/). This codebase is separate from the [Flyright Webapp](https://github.com/tyhopp/flyright-webapp), which is written in just React.
 
+## Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6824303b-1341-4ac7-9b16-732a45cc3e6b/deploy-status)](https://app.netlify.com/sites/flyright/deploys)
+
 ## Deployment
 
 This site is deployed via Netlify at https://flyright.netlify.com. The production site will later be deployed at https://flyright.co.
