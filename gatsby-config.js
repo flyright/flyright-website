@@ -3,7 +3,7 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: 'Flyright',
-    author: 'Ty Hopp',
+    author: 'Flyright, Inc.',
     siteUrl: 'https://flyright.co',
   },
   plugins: [
