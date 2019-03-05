@@ -2,7 +2,7 @@
   "name": "flyright-website",
   "description": "The official website of Flyright, Inc.",
   "version": "1.0.1",
-  "author": "Ty Hopp <ty@flyright.co>",
+  "author": "Flyright, Inc. <team@flyright.co>",
   "dependencies": {
     "copy-to-clipboard": "^3.0.8",
     "dotenv": "^6.0.0",
