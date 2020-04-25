@@ -1,8 +1,11 @@
 {
   "name": "flyright-website",
-  "description": "The official website of Flyright, Inc.",
+  "description": "The official website of Flyright",
   "version": "1.0.1",
-  "author": "Flyright, Inc. <team@flyright.co>",
+  "contributors": [
+    "Benjamin Wallsten",
+    "Ty Hopp (https://tyhopp.com)"
+  ],
   "dependencies": {
     "copy-to-clipboard": "^3.0.8",
     "dotenv": "^6.0.0",
@@ -24,21 +27,16 @@
     "react-modal": "^3.4.5",
     "styled-components": "^3.3.3"
   },
+  "resolutions": {
+    "sharp": "0.22.1"
+  },
   "devDependencies": {
     "prettier": "^1.6.1"
   },
   "main": "n/a",
   "scripts": {
-    "dev": "gatsby develop",
-    "lint":
-      "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
-    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi":
-      "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
