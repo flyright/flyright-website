@@ -45,12 +45,12 @@ const Cta = props => {
 												iOS
 											</Button>
 										</LinkExternal>
-										<LinkExternal href={android} target="_blank" rel="noopener">
+										{/* <LinkExternal href={android} target="_blank" rel="noopener">
 											<Button purple bigger>
 												<IconAndroid white bigger />
 												Android
 											</Button>
-										</LinkExternal>
+										</LinkExternal> */}
 									</Row>
 								)}
 								{item.buttonText && (

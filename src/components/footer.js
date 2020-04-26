@@ -67,7 +67,7 @@ const Footer = props => {
               <TextL smaller color={white} padding="0 0 0.5em 0">
                 Platform
               </TextL>
-              <LinkExternal
+              {/* <LinkExternal
                 footer
                 href={android}
                 target="_blank"
@@ -76,7 +76,7 @@ const Footer = props => {
                 <TextM smaller color={white} padding="0.25em 0">
                   Android
                 </TextM>
-              </LinkExternal>
+              </LinkExternal> */}
               <LinkExternal footer href={ios} target="_blank" rel="noopener">
                 <TextM smaller color={white} padding="0.25em 0">
                   iOS
